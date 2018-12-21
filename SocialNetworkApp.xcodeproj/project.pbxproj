@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD6C08D421CCF50B000DCDA7 /* Extentions+ UIVIews.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6C08D321CCF50B000DCDA7 /* Extentions+ UIVIews.swift */; };
+		AD6C08D621CD0008000DCDA7 /* Extentions+NSLayautConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6C08D521CD0008000DCDA7 /* Extentions+NSLayautConstraint.swift */; };
+		AD6C08DC21CD08A5000DCDA7 /* InfoUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6C08DA21CD08A5000DCDA7 /* InfoUserTableViewCell.swift */; };
+		AD6C08DD21CD08A5000DCDA7 /* InfoUserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD6C08DB21CD08A5000DCDA7 /* InfoUserTableViewCell.xib */; };
+		AD6C08E221CD113F000DCDA7 /* HeigtContainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6C08E121CD113F000DCDA7 /* HeigtContainable.swift */; };
+		AD6C08E421CD11E6000DCDA7 /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6C08E321CD11E6000DCDA7 /* Typealiases.swift */; };
 		ADC7511D21CA87EC00344810 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC7511C21CA87EC00344810 /* AppDelegate.swift */; };
 		ADC7511F21CA87EC00344810 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC7511E21CA87EC00344810 /* ViewController.swift */; };
 		ADC7512421CA87EE00344810 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADC7512321CA87EE00344810 /* Assets.xcassets */; };
@@ -32,6 +38,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AD6C08D321CCF50B000DCDA7 /* Extentions+ UIVIews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extentions+ UIVIews.swift"; sourceTree = "<group>"; };
+		AD6C08D521CD0008000DCDA7 /* Extentions+NSLayautConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extentions+NSLayautConstraint.swift"; sourceTree = "<group>"; };
+		AD6C08DA21CD08A5000DCDA7 /* InfoUserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoUserTableViewCell.swift; sourceTree = "<group>"; };
+		AD6C08DB21CD08A5000DCDA7 /* InfoUserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoUserTableViewCell.xib; sourceTree = "<group>"; };
+		AD6C08E121CD113F000DCDA7 /* HeigtContainable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeigtContainable.swift; sourceTree = "<group>"; };
+		AD6C08E321CD11E6000DCDA7 /* Typealiases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealiases.swift; sourceTree = "<group>"; };
 		ADC7511921CA87EC00344810 /* SocialNetworkApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialNetworkApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADC7511C21CA87EC00344810 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADC7511E21CA87EC00344810 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +80,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AD6C08D221CCF494000DCDA7 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				AD6C08D321CCF50B000DCDA7 /* Extentions+ UIVIews.swift */,
+				AD6C08D521CD0008000DCDA7 /* Extentions+NSLayautConstraint.swift */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
+		AD6C08D721CD07D1000DCDA7 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				AD6C08DA21CD08A5000DCDA7 /* InfoUserTableViewCell.swift */,
+				AD6C08DB21CD08A5000DCDA7 /* InfoUserTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		ADC7511021CA87EC00344810 = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				ADC7511C21CA87EC00344810 /* AppDelegate.swift */,
+				AD6C08D221CCF494000DCDA7 /* Extentions */,
 				ADC7515221CC39EF00344810 /* Protocols */,
 				ADC7514221CA987E00344810 /* Routers */,
 				ADC7514021CA981D00344810 /* Screens */,
@@ -166,6 +197,7 @@
 		ADC7514C21CC378C00344810 /* Custon Views */ = {
 			isa = PBXGroup;
 			children = (
+				AD6C08D721CD07D1000DCDA7 /* Cells */,
 				ADC7514D21CC382000344810 /* PhotoView */,
 			);
 			path = "Custon Views";
@@ -183,6 +215,8 @@
 			isa = PBXGroup;
 			children = (
 				ADC7515321CC3A2300344810 /* NibLoadable.swift */,
+				AD6C08E321CD11E6000DCDA7 /* Typealiases.swift */,
+				AD6C08E121CD113F000DCDA7 /* HeigtContainable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -268,6 +302,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD6C08DD21CD08A5000DCDA7 /* InfoUserTableViewCell.xib in Resources */,
 				ADC7512721CA87EE00344810 /* LaunchScreen.storyboard in Resources */,
 				ADC7513D21CA8DEF00344810 /* ViewController.xib in Resources */,
 				ADC7512421CA87EE00344810 /* Assets.xcassets in Resources */,
@@ -290,11 +325,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADC7511F21CA87EC00344810 /* ViewController.swift in Sources */,
+				AD6C08D621CD0008000DCDA7 /* Extentions+NSLayautConstraint.swift in Sources */,
+				AD6C08DC21CD08A5000DCDA7 /* InfoUserTableViewCell.swift in Sources */,
 				ADC7514A21CC361900344810 /* RegisterViewController.swift in Sources */,
 				ADC7515421CC3A2300344810 /* NibLoadable.swift in Sources */,
 				ADC7514421CA999600344810 /* Router.swift in Sources */,
+				AD6C08D421CCF50B000DCDA7 /* Extentions+ UIVIews.swift in Sources */,
 				ADC7514F21CC387300344810 /* PhotoView.swift in Sources */,
+				AD6C08E421CD11E6000DCDA7 /* Typealiases.swift in Sources */,
 				ADC7511D21CA87EC00344810 /* AppDelegate.swift in Sources */,
+				AD6C08E221CD113F000DCDA7 /* HeigtContainable.swift in Sources */,
 				ADC7514621CC28FE00344810 /* StartRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

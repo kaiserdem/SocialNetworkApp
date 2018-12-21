@@ -22,6 +22,6 @@ final class Router {
         window = UIWindow(frame: frame)
         window?.makeKeyAndVisible()
         
-        window?.rootViewController = ViewController()
+        window?.rootViewController = UINavigationController(rootViewController: rootViewController)
     }
 }

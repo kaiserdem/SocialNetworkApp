@@ -9,7 +9,13 @@
 import UIKit
 
 final class StartRouter {
-    static func goToRegisterScreen(from source: UIViewController) {
-        
+    static let shared = StartRouter()
+    
+    private init() {} // закрываем возможность инициализироваться
+    
+    func goToRegisterScreen(from source: UIViewController) {
+        let vc = RegisterViewController()
+        print("RegisterViewController")
+        source.navigationController?.pushViewController(vc, animated: true)
     }
 }

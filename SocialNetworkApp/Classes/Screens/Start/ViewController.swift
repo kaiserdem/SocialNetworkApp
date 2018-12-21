@@ -19,12 +19,18 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         Decorator.decorate(_vc: self)
-        
+        addTargets()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)// приячим навигейшен бар
+        navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
     // функция добавляет тргет к кнопкам
     private func addTargets() {
         singInButton.addTarget(self, action: #selector(singInButtonCliced), for: .touchUpInside)
-        singInButton.addTarget(self, action: #selector(registerButtonCliced), for: .touchUpInside)
+        registerButton.addTarget(self, action: #selector(registerButtonCliced), for: .touchUpInside)
 
         
     }
@@ -32,7 +38,7 @@ class ViewController: UIViewController {
         
     }
     @objc private func registerButtonCliced() {
-        
+        StartRouter.shared.goToRegisterScreen(from: self)
     }
 
 }
@@ -43,8 +49,8 @@ extension ViewController {// расшинеие сласса
         private init() {}
 
         static func decorate(_vc: ViewController) {
-            _vc.singInButton.layer.cornerRadius = buttonCornerRadius
-            _vc.singInButton.layer.borderColor = #colorLiteral(red: 0.2980392157, green: 0.4588235294, blue: 0.6392156863, alpha: 1)
+            _vc.registerButton.layer.cornerRadius = buttonCornerRadius
+            _vc.registerButton.layer.borderColor = #colorLiteral(red: 0.2980392157, green: 0.4588235294, blue: 0.6392156863, alpha: 1)
         }
     }
 }
