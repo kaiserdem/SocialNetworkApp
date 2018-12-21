@@ -9,10 +9,16 @@
 /* Begin PBXBuildFile section */
 		ADC7511D21CA87EC00344810 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC7511C21CA87EC00344810 /* AppDelegate.swift */; };
 		ADC7511F21CA87EC00344810 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC7511E21CA87EC00344810 /* ViewController.swift */; };
-		ADC7512221CA87EC00344810 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADC7512021CA87EC00344810 /* Main.storyboard */; };
 		ADC7512421CA87EE00344810 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADC7512321CA87EE00344810 /* Assets.xcassets */; };
 		ADC7512721CA87EE00344810 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADC7512521CA87EE00344810 /* LaunchScreen.storyboard */; };
 		ADC7513221CA87EE00344810 /* SocialNetworkAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC7513121CA87EE00344810 /* SocialNetworkAppTests.swift */; };
+		ADC7513D21CA8DEF00344810 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADC7513C21CA8DEF00344810 /* ViewController.xib */; };
+		ADC7514421CA999600344810 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC7514321CA999600344810 /* Router.swift */; };
+		ADC7514621CC28FE00344810 /* StartRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC7514521CC28FE00344810 /* StartRouter.swift */; };
+		ADC7514A21CC361900344810 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC7514821CC361900344810 /* RegisterViewController.swift */; };
+		ADC7514B21CC361900344810 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADC7514921CC361900344810 /* RegisterViewController.xib */; };
+		ADC7514F21CC387300344810 /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC7514E21CC387300344810 /* PhotoView.swift */; };
+		ADC7515421CC3A2300344810 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC7515321CC3A2300344810 /* NibLoadable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +35,19 @@
 		ADC7511921CA87EC00344810 /* SocialNetworkApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialNetworkApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADC7511C21CA87EC00344810 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADC7511E21CA87EC00344810 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		ADC7512121CA87EC00344810 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ADC7512321CA87EE00344810 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ADC7512621CA87EE00344810 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ADC7512821CA87EE00344810 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADC7512D21CA87EE00344810 /* SocialNetworkAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SocialNetworkAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADC7513121CA87EE00344810 /* SocialNetworkAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialNetworkAppTests.swift; sourceTree = "<group>"; };
 		ADC7513321CA87EE00344810 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ADC7513C21CA8DEF00344810 /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		ADC7514321CA999600344810 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		ADC7514521CC28FE00344810 /* StartRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartRouter.swift; sourceTree = "<group>"; };
+		ADC7514821CC361900344810 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		ADC7514921CC361900344810 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		ADC7514E21CC387300344810 /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
+		ADC7515321CC3A2300344810 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +89,9 @@
 		ADC7511B21CA87EC00344810 /* SocialNetworkApp */ = {
 			isa = PBXGroup;
 			children = (
-				ADC7511C21CA87EC00344810 /* AppDelegate.swift */,
-				ADC7511E21CA87EC00344810 /* ViewController.swift */,
-				ADC7512021CA87EC00344810 /* Main.storyboard */,
-				ADC7512321CA87EE00344810 /* Assets.xcassets */,
-				ADC7512521CA87EE00344810 /* LaunchScreen.storyboard */,
 				ADC7512821CA87EE00344810 /* Info.plist */,
+				ADC7513E21CA95C800344810 /* Classes */,
+				ADC7513F21CA97D900344810 /* Resourses */,
 			);
 			path = SocialNetworkApp;
 			sourceTree = "<group>";
@@ -94,6 +103,88 @@
 				ADC7513321CA87EE00344810 /* Info.plist */,
 			);
 			path = SocialNetworkAppTests;
+			sourceTree = "<group>";
+		};
+		ADC7513E21CA95C800344810 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				ADC7511C21CA87EC00344810 /* AppDelegate.swift */,
+				ADC7515221CC39EF00344810 /* Protocols */,
+				ADC7514221CA987E00344810 /* Routers */,
+				ADC7514021CA981D00344810 /* Screens */,
+				ADC7514C21CC378C00344810 /* Custon Views */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		ADC7513F21CA97D900344810 /* Resourses */ = {
+			isa = PBXGroup;
+			children = (
+				ADC7512321CA87EE00344810 /* Assets.xcassets */,
+				ADC7512521CA87EE00344810 /* LaunchScreen.storyboard */,
+			);
+			path = Resourses;
+			sourceTree = "<group>";
+		};
+		ADC7514021CA981D00344810 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				ADC7514721CC33FC00344810 /* Register */,
+				ADC7514121CA983100344810 /* Start */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		ADC7514121CA983100344810 /* Start */ = {
+			isa = PBXGroup;
+			children = (
+				ADC7511E21CA87EC00344810 /* ViewController.swift */,
+				ADC7513C21CA8DEF00344810 /* ViewController.xib */,
+			);
+			path = Start;
+			sourceTree = "<group>";
+		};
+		ADC7514221CA987E00344810 /* Routers */ = {
+			isa = PBXGroup;
+			children = (
+				ADC7514321CA999600344810 /* Router.swift */,
+				ADC7514521CC28FE00344810 /* StartRouter.swift */,
+			);
+			path = Routers;
+			sourceTree = "<group>";
+		};
+		ADC7514721CC33FC00344810 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				ADC7514821CC361900344810 /* RegisterViewController.swift */,
+				ADC7514921CC361900344810 /* RegisterViewController.xib */,
+			);
+			name = Register;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		ADC7514C21CC378C00344810 /* Custon Views */ = {
+			isa = PBXGroup;
+			children = (
+				ADC7514D21CC382000344810 /* PhotoView */,
+			);
+			path = "Custon Views";
+			sourceTree = "<group>";
+		};
+		ADC7514D21CC382000344810 /* PhotoView */ = {
+			isa = PBXGroup;
+			children = (
+				ADC7514E21CC387300344810 /* PhotoView.swift */,
+			);
+			path = PhotoView;
+			sourceTree = "<group>";
+		};
+		ADC7515221CC39EF00344810 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				ADC7515321CC3A2300344810 /* NibLoadable.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,8 +269,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADC7512721CA87EE00344810 /* LaunchScreen.storyboard in Resources */,
+				ADC7513D21CA8DEF00344810 /* ViewController.xib in Resources */,
 				ADC7512421CA87EE00344810 /* Assets.xcassets in Resources */,
-				ADC7512221CA87EC00344810 /* Main.storyboard in Resources */,
+				ADC7514B21CC361900344810 /* RegisterViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,7 +290,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADC7511F21CA87EC00344810 /* ViewController.swift in Sources */,
+				ADC7514A21CC361900344810 /* RegisterViewController.swift in Sources */,
+				ADC7515421CC3A2300344810 /* NibLoadable.swift in Sources */,
+				ADC7514421CA999600344810 /* Router.swift in Sources */,
+				ADC7514F21CC387300344810 /* PhotoView.swift in Sources */,
 				ADC7511D21CA87EC00344810 /* AppDelegate.swift in Sources */,
+				ADC7514621CC28FE00344810 /* StartRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,14 +318,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		ADC7512021CA87EC00344810 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				ADC7512121CA87EC00344810 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		ADC7512521CA87EE00344810 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -363,6 +452,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q2TWT4N9WP;
 				INFOPLIST_FILE = SocialNetworkApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -381,6 +471,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q2TWT4N9WP;
 				INFOPLIST_FILE = SocialNetworkApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
