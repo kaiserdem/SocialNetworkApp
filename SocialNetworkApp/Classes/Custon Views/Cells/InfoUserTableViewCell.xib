@@ -19,20 +19,13 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="99.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tCg-EB-BVk" customClass="PhotoView" customModule="SocialNetworkApp" customModuleProvider="target">
+                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tCg-EB-BVk" customClass="PhotoView" customModule="SocialNetworkApp" customModuleProvider="target">
                         <rect key="frame" x="16" y="15" width="69.5" height="69.5"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstAttribute="width" secondItem="tCg-EB-BVk" secondAttribute="height" multiplier="1:1" id="cXF-7H-zTA"/>
-                        </constraints>
                     </view>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                <constraints>
-                    <constraint firstItem="tCg-EB-BVk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Ob2-u9-O2X"/>
-                    <constraint firstItem="tCg-EB-BVk" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="VKc-h9-Bha"/>
-                    <constraint firstItem="tCg-EB-BVk" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.7" id="aIU-N9-Ixn"/>
-                </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

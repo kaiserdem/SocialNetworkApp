@@ -10,46 +10,39 @@ import UIKit
 
 final class PhotoView: UIView, NibLoadable {
     
-    private let stackView = UIStackView()
     private let plusView = UIImageView()
     private let lable = UILabel()
     
     override func didMoveToSuperview() {
         super.didMoveToSuperview()
-        addStackView()
-        addPlusView()
+        Decorator.decorator(self)
         addLable()
+        addPlusView()
     }
     
     private func addLable() {
-        lable.text = "photo"
+        lable.text = " photo"
+        lable.translatesAutoresizingMaskIntoConstraints = false
+        lable.textAlignment = .center
         lable.font = UIFont.systemFont(ofSize: 12)
         lable.textColor = #colorLiteral(red: 0.2980392157, green: 0.4588235294, blue: 0.6392156863, alpha: 1)
-        stackView.addArrangedSubview(lable)
+        addSubview(lable)
+        
+        let constraints = NSLayoutConstraint.constraints(withNewVisyalFormat: "H:|[lable]|,V:|-45-[lable]", dict: ["lable": lable])
+        addConstraints(constraints)
     }
     
     private func addPlusView() { //красит кнопку в свой цвет
+        plusView.translatesAutoresizingMaskIntoConstraints = false
         plusView.contentMode = .scaleAspectFit
         plusView.tintColor = #colorLiteral(red: 0.2980392157, green: 0.4588235294, blue: 0.6392156863, alpha: 1)
         plusView.image = #imageLiteral(resourceName: "plus (1)")
-        stackView.addArrangedSubview(plusView)
+        addSubview(plusView)
+        
+        let constraints = NSLayoutConstraint.constraints(withNewVisyalFormat: "H:|[plusView]|,V:|-15-[plusView(\(frame.height * 0.4))][lable]", dict: ["lable": lable, "plusView": plusView])
+        addConstraints(constraints)
     }
 
-    private func addStackView() {
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.distribution = .fillEqually
-        stackView.alignment = .center
-        stackView.axis = .vertical
-        addSubview(stackView)
-        
-        let constraints = NSLayoutConstraint.constraints(withNewVisyalFormat: "H:|-20-[stackView]|,V:|-20-[stackView]|", dict: ["stackView": stackView])
-        addConstraints(constraints)
-//        stackView.topAnchor.constraint(equalTo: topAnchor).isActive = true
-//        stackView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-//        stackView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
-//        stackView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-    }
-    
     override func layoutSubviews() {
         super.layoutSubviews()
         
