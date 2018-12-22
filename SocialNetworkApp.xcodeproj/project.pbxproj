@@ -130,6 +130,7 @@
 		AD6C08D721CD07D1000DCDA7 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				AD6C08F121CEA506000DCDA7 /* Info User Cell */,
 				AD6C08DA21CD08A5000DCDA7 /* InfoUserTableViewCell.swift */,
 				AD6C08DB21CD08A5000DCDA7 /* InfoUserTableViewCell.xib */,
 			);
@@ -143,6 +144,13 @@
 				AD6C08EC21CE8510000DCDA7 /* HeaderTitleView.xib */,
 			);
 			path = "Header Titel View";
+			sourceTree = "<group>";
+		};
+		AD6C08F121CEA506000DCDA7 /* Info User Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Info User Cell";
 			sourceTree = "<group>";
 		};
 		ADC7511021CA87EC00344810 = {
