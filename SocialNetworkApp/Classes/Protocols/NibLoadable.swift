@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol NibLoadable: class {
+protocol NibLoadable: class { // протокол позволяет получать доступ к nib
     static var nib: UINib { get }
 }
 
@@ -16,7 +16,7 @@ extension NibLoadable {
     static var nib: UINib {
         return UINib(nibName: name, bundle: Bundle.init(for: self))
     }
-    static var name: String {
+    static var name: String { // получаем имя
         return String(describing: self)
     }
 }

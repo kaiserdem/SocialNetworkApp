@@ -16,6 +16,9 @@
 		AD6C08E221CD113F000DCDA7 /* HeigtContainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6C08E121CD113F000DCDA7 /* HeigtContainable.swift */; };
 		AD6C08E421CD11E6000DCDA7 /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6C08E321CD11E6000DCDA7 /* Typealiases.swift */; };
 		AD6C08E821CE62E6000DCDA7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD6C08E721CE62E6000DCDA7 /* GoogleService-Info.plist */; };
+		AD6C08EB21CE84E2000DCDA7 /* HeaderTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6C08EA21CE84E2000DCDA7 /* HeaderTitleView.swift */; };
+		AD6C08ED21CE8510000DCDA7 /* HeaderTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD6C08EC21CE8510000DCDA7 /* HeaderTitleView.xib */; };
+		AD6C08EF21CE88E0000DCDA7 /* CellHeaderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6C08EE21CE88E0000DCDA7 /* CellHeaderProtocol.swift */; };
 		ADC7511D21CA87EC00344810 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC7511C21CA87EC00344810 /* AppDelegate.swift */; };
 		ADC7511F21CA87EC00344810 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC7511E21CA87EC00344810 /* ViewController.swift */; };
 		ADC7512421CA87EE00344810 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADC7512321CA87EE00344810 /* Assets.xcassets */; };
@@ -52,6 +55,9 @@
 		AD6C08E121CD113F000DCDA7 /* HeigtContainable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeigtContainable.swift; sourceTree = "<group>"; };
 		AD6C08E321CD11E6000DCDA7 /* Typealiases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealiases.swift; sourceTree = "<group>"; };
 		AD6C08E721CE62E6000DCDA7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AD6C08EA21CE84E2000DCDA7 /* HeaderTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTitleView.swift; sourceTree = "<group>"; };
+		AD6C08EC21CE8510000DCDA7 /* HeaderTitleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderTitleView.xib; sourceTree = "<group>"; };
+		AD6C08EE21CE88E0000DCDA7 /* CellHeaderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellHeaderProtocol.swift; sourceTree = "<group>"; };
 		ADC7511921CA87EC00344810 /* SocialNetworkApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialNetworkApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADC7511C21CA87EC00344810 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADC7511E21CA87EC00344810 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -128,6 +134,15 @@
 				AD6C08DB21CD08A5000DCDA7 /* InfoUserTableViewCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		AD6C08E921CE849D000DCDA7 /* Header Titel View */ = {
+			isa = PBXGroup;
+			children = (
+				AD6C08EA21CE84E2000DCDA7 /* HeaderTitleView.swift */,
+				AD6C08EC21CE8510000DCDA7 /* HeaderTitleView.xib */,
+			);
+			path = "Header Titel View";
 			sourceTree = "<group>";
 		};
 		ADC7511021CA87EC00344810 = {
@@ -232,6 +247,7 @@
 		ADC7514C21CC378C00344810 /* Custon Views */ = {
 			isa = PBXGroup;
 			children = (
+				AD6C08E921CE849D000DCDA7 /* Header Titel View */,
 				AD6C08D721CD07D1000DCDA7 /* Cells */,
 				ADC7514D21CC382000344810 /* PhotoView */,
 			);
@@ -252,6 +268,7 @@
 				ADC7515321CC3A2300344810 /* NibLoadable.swift */,
 				AD6C08E321CD11E6000DCDA7 /* Typealiases.swift */,
 				AD6C08E121CD113F000DCDA7 /* HeigtContainable.swift */,
+				AD6C08EE21CE88E0000DCDA7 /* CellHeaderProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -341,6 +358,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD6C08DD21CD08A5000DCDA7 /* InfoUserTableViewCell.xib in Resources */,
+				AD6C08ED21CE8510000DCDA7 /* HeaderTitleView.xib in Resources */,
 				ADC7512721CA87EE00344810 /* LaunchScreen.storyboard in Resources */,
 				ADC7513D21CA8DEF00344810 /* ViewController.xib in Resources */,
 				ADC7512421CA87EE00344810 /* Assets.xcassets in Resources */,
@@ -434,12 +452,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD6C08EF21CE88E0000DCDA7 /* CellHeaderProtocol.swift in Sources */,
 				ADC7511F21CA87EC00344810 /* ViewController.swift in Sources */,
 				AD6C08D621CD0008000DCDA7 /* Extentions+NSLayautConstraint.swift in Sources */,
 				AD6C08DC21CD08A5000DCDA7 /* InfoUserTableViewCell.swift in Sources */,
 				ADC7514A21CC361900344810 /* RegisterViewController.swift in Sources */,
 				ADC7515421CC3A2300344810 /* NibLoadable.swift in Sources */,
 				ADC7514421CA999600344810 /* Router.swift in Sources */,
+				AD6C08EB21CE84E2000DCDA7 /* HeaderTitleView.swift in Sources */,
 				AD6C08D421CCF50B000DCDA7 /* Extentions+ UIVIews.swift in Sources */,
 				ADC7514F21CC387300344810 /* PhotoView.swift in Sources */,
 				AD6C08E421CD11E6000DCDA7 /* Typealiases.swift in Sources */,

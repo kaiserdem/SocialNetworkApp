@@ -50,7 +50,7 @@ extension ViewController {// расшинеие сласса
 
         static func decorate(_vc: ViewController) {
             _vc.registerButton.layer.cornerRadius = buttonCornerRadius
-            _vc.registerButton.layer.borderColor = #colorLiteral(red: 0.2980392157, green: 0.4588235294, blue: 0.6392156863, alpha: 1)
+            _vc.registerButton.layer.borderColor = #colorLiteral(red: 0.9450980392, green: 0.9450980392, blue: 0.9450980392, alpha: 1)
         }
     }
 }
