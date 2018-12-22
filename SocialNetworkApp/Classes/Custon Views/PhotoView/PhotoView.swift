@@ -23,7 +23,7 @@ final class PhotoView: UIView, NibLoadable {
     
     private func addLable() {
         lable.text = "photo"
-        lable.font = UIFont.systemFont(ofSize: 9)
+        lable.font = UIFont.systemFont(ofSize: 12)
         lable.textColor = #colorLiteral(red: 0.2980392157, green: 0.4588235294, blue: 0.6392156863, alpha: 1)
         stackView.addArrangedSubview(lable)
     }
@@ -31,7 +31,7 @@ final class PhotoView: UIView, NibLoadable {
     private func addPlusView() { //красит кнопку в свой цвет
         plusView.contentMode = .scaleAspectFit
         plusView.tintColor = #colorLiteral(red: 0.2980392157, green: 0.4588235294, blue: 0.6392156863, alpha: 1)
-        plusView.image = #imageLiteral(resourceName: "plus.png")
+        plusView.image = #imageLiteral(resourceName: "plus (1)")
         stackView.addArrangedSubview(plusView)
     }
 
@@ -42,7 +42,7 @@ final class PhotoView: UIView, NibLoadable {
         stackView.axis = .vertical
         addSubview(stackView)
         
-        let constraints = NSLayoutConstraint.constraints(withNewVisyalFormat: "H:|[stackView]|,V:|[stackView]|", dict: ["stackView": stackView])
+        let constraints = NSLayoutConstraint.constraints(withNewVisyalFormat: "H:|-20-[stackView]|,V:|-20-[stackView]|", dict: ["stackView": stackView])
         addConstraints(constraints)
 //        stackView.topAnchor.constraint(equalTo: topAnchor).isActive = true
 //        stackView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
