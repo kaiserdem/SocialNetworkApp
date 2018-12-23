@@ -9,3 +9,5 @@
 import Foundation
 
 typealias StaticCellProtocol = NibLoadable & HeigtContainable
+
+typealias ItemClosure<T> = ((T) -> Void) // дженерик

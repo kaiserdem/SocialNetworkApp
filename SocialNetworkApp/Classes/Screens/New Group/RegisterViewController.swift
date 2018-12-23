@@ -14,6 +14,11 @@ class RegisterViewController: UIViewController {
     
     private let models: [HeaderModel] = [.info, .sex, .birthday]
     
+    private let datePickerView: UIDatePicker = { //скобки для инициализации переменной сразу
+        let picker = UIDatePicker()
+        picker.maximumDate = Date()
+        return picker
+    }()
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -33,8 +38,11 @@ class RegisterViewController: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
-    private func registerCells() { // зарегистрировали ячейку
+    private func registerCells() { // зарегистрировали ячейки
         tableView.register(InfoUserTableViewCell.nib, forCellReuseIdentifier: InfoUserTableViewCell.name)
+        tableView.register(SegmentedTableViewCell.nib, forCellReuseIdentifier: SegmentedTableViewCell.name)
+        tableView.register(TextFieldCellTableViewCell.nib, forCellReuseIdentifier: TextFieldCellTableViewCell.name)
+
     }
 }
 
@@ -46,14 +54,14 @@ extension RegisterViewController {
     }
     fileprivate enum HeaderModel: CellHeaderProtocol {
         typealias  CellType = CellModel
-        case sex
         case info
+        case sex
         case birthday
         
         var cellModels: [RegisterViewController.CellModel] {
             switch self {
-                case .sex: return [.sex]
                 case .info: return [.userInfo]
+                case .sex: return [.sex]
                 case .birthday: return[.birthday]
             }
         }
@@ -63,22 +71,22 @@ extension RegisterViewController {
     private static let tableViewTopInsets: CGFloat = 16
     fileprivate class Decorator {
         static func decorate(vc: RegisterViewController) {
-            vc.tableView.separatorColor = .clear
-            vc.tableView.backgroundColor = #colorLiteral(red: 0.9450980392, green: 0.9450980392, blue: 0.9450980392, alpha: 1)
+            vc.tableView.separatorColor = #colorLiteral(red: 0.7450980392, green: 0.7450980392, blue: 0.7450980392, alpha: 1)
+            vc.tableView.backgroundColor = .clear
             vc.navigationController?.navigationBar.prefersLargeTitles = true
             vc.tableView.contentInset = UIEdgeInsets(top: tableViewTopInsets, left: 0, bottom: 0, right: 0) // отступ вверху таблицы
         }
     }
 }
-
+// высота ячейки
 extension RegisterViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let model = models[indexPath.section].cellModels[indexPath.row]
         switch model {
         case .userInfo:
             return 100
-        default:
-            return 0
+        case .sex, .birthday:
+            return 44
         }
     }
 }
@@ -94,22 +102,34 @@ extension RegisterViewController: UITableViewDataSource {
             return view
         default: return nil
         }
-       
-    }
+    }    // высота отступа ячейки
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         let headerModel = models[section]
         switch headerModel {
-        case .sex:
+        case .sex, .birthday:
             return 44
         default: return 0
         }
-        
     }
+    // вызываем зарегестрированию ячейку
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let model = models[indexPath.section].cellModels[indexPath.row]
         switch model {
         case .userInfo:
             if let cell = tableView.dequeueReusableCell(withIdentifier: InfoUserTableViewCell.name, for: indexPath) as? InfoUserTableViewCell {
+                return cell
+            }
+        case .sex:
+            if let cell = tableView.dequeueReusableCell(withIdentifier: SegmentedTableViewCell.name, for: indexPath) as? SegmentedTableViewCell {
+                cell.indexChanged = {
+                    index in
+                    print(index)
+                }
+                return cell
+            }
+        case .birthday:
+            if let cell = tableView.dequeueReusableCell(withIdentifier: TextFieldCellTableViewCell.name, for: indexPath) as? TextFieldCellTableViewCell {
+                cell.textF
                 return cell
             }
         default: break
@@ -120,6 +140,6 @@ extension RegisterViewController: UITableViewDataSource {
         return models[section].cellModels.count
     }
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return models.count
     }
 }
