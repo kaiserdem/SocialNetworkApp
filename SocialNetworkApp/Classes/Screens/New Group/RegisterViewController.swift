@@ -23,9 +23,19 @@ class RegisterViewController: UIViewController {
         super.viewDidLoad()
 
         title = "Registration"
+        
         Decorator.decorate(vc: self)
         registerCells()
         delegating()
+        configureDatePickerView()
+    }
+    
+    private func configureDatePickerView () { // пикер вю
+        datePickerView.addTarget(self, action: #selector(datePickerChanged(sender:)), for: .valueChanged)
+    }
+    @objc private func datePickerChanged(sender: UIDatePicker) {
+        let date = sender.date
+        print(date)
     }
 
     private func delegating() { // подпимали делегат и дата сорс
@@ -71,6 +81,7 @@ extension RegisterViewController {
     private static let tableViewTopInsets: CGFloat = 16
     fileprivate class Decorator {
         static func decorate(vc: RegisterViewController) {
+            vc.tableView.keyboardDismissMode = .onDrag //убрать клавиатуру при свайпе
             vc.tableView.separatorColor = #colorLiteral(red: 0.7450980392, green: 0.7450980392, blue: 0.7450980392, alpha: 1)
             vc.tableView.backgroundColor = .clear
             vc.navigationController?.navigationBar.prefersLargeTitles = true
@@ -129,10 +140,9 @@ extension RegisterViewController: UITableViewDataSource {
             }
         case .birthday:
             if let cell = tableView.dequeueReusableCell(withIdentifier: TextFieldCellTableViewCell.name, for: indexPath) as? TextFieldCellTableViewCell {
-                cell.textF
+                cell.textField.inputView = datePickerView
                 return cell
             }
-        default: break
         }
         return UITableViewCell()
     }

@@ -10,11 +10,11 @@ import UIKit
 
 class TextFieldCellTableViewCell: UITableViewCell, NibLoadable {
 
-    @IBOutlet private weak var textField: UITextField!
+    @IBOutlet weak var textField: UITextField!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
