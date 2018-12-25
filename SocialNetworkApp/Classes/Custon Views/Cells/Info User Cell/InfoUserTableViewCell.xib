@@ -26,25 +26,25 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VYc-K6-nc3">
-                        <rect key="frame" x="93" y="0.0" width="312" height="100"/>
+                        <rect key="frame" x="96" y="0.0" width="309" height="100"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DU7-eN-A9f">
-                                <rect key="frame" x="51" y="61" width="211" height="30"/>
+                                <rect key="frame" x="49" y="61" width="211" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8o9-Dl-AWh">
-                                <rect key="frame" x="51" y="13" width="211" height="30"/>
+                                <rect key="frame" x="49" y="13" width="211" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j45-SC-Uua">
-                                <rect key="frame" x="36" y="50" width="276" height="1"/>
+                                <rect key="frame" x="19" y="50" width="288" height="1"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="darkGray"/>
                             </view>
@@ -58,7 +58,9 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="backgroundFieldView" destination="VYc-K6-nc3" id="FCe-CZ-y0p"/>
+                <outlet property="bottomTextField" destination="DU7-eN-A9f" id="tuf-Xk-d6N"/>
                 <outlet property="photoView" destination="tCg-EB-BVk" id="F6p-Kt-z2R"/>
+                <outlet property="topTextField" destination="8o9-Dl-AWh" id="Fcm-w3-ak8"/>
             </connections>
             <point key="canvasLocation" x="124" y="69.265367316341838"/>
         </tableViewCell>

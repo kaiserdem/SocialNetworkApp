@@ -13,17 +13,41 @@ class InfoUserTableViewCell: UITableViewCell, StaticCellProtocol {
     @IBOutlet private weak var backgroundFieldView: UIView!
     
     @IBOutlet private weak var photoView: PhotoView! // аутлет фотографии
+    @IBOutlet private weak var topTextField: UITextField!
+    @IBOutlet private weak var bottomTextField: UITextField!
 
     static var heigth: CGFloat { // высота
         return 100
     }
-    var photoViewClicked: VoidClosure?
-    
+    var photoViewClicked: VoidClosure? {
+        didSet { // при изменении photoViewClicked меняем внутри photoView
+            photoView.clicked = photoViewClicked
+        }
+    }
+    // отдает екшен что текст изменился и передает сам текст
+    var topTextChanged: ItemClosure<String>?
+    var bottomTextChanged: ItemClosure<String>?
+
     override func awakeFromNib() {
         super.awakeFromNib()
         
         Decoretor.decorator(cell: self)
-        photoView.clicked = photoViewClicked // нажатие на фото
+        addTargets()
+    }
+    private func addTargets(){
+        topTextField.addTarget(self, action: #selector(topTextFieldChanged(sender:)), for: .editingChanged)
+        
+        bottomTextField.addTarget(self, action: #selector(bottomTextFieldChanged(sender:)), for: .editingChanged)
+    }
+    @objc private func topTextFieldChanged(sender: UITextField){
+        topTextChanged?(sender.text ?? "")
+        
+    }
+    @objc private func bottomTextFieldChanged(sender: UITextField){
+        bottomTextChanged?(sender.text ?? "")
+    }
+    func set(image: UIImage?) { 
+        photoView.set(image: image)
     }
 }
 extension InfoUserTableViewCell {

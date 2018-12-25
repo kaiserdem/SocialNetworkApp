@@ -12,6 +12,7 @@
 		AD281CDC21D28CA900B56C88 /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD281CDB21D28CA900B56C88 /* RegisterModel.swift */; };
 		AD281CDE21D28D3800B56C88 /* Sex.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD281CDD21D28D3800B56C88 /* Sex.swift */; };
 		AD281CE021D298C300B56C88 /* Extentions+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD281CDF21D298C300B56C88 /* Extentions+UIViewController.swift */; };
+		AD281CE321D2DAF400B56C88 /* AuthManeger.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD281CE221D2DAF400B56C88 /* AuthManeger.swift */; };
 		AD6C08D421CCF50B000DCDA7 /* Extentions+ UIVIews.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6C08D321CCF50B000DCDA7 /* Extentions+ UIVIews.swift */; };
 		AD6C08D621CD0008000DCDA7 /* Extentions+NSLayautConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6C08D521CD0008000DCDA7 /* Extentions+NSLayautConstraint.swift */; };
 		AD6C08DC21CD08A5000DCDA7 /* InfoUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6C08DA21CD08A5000DCDA7 /* InfoUserTableViewCell.swift */; };
@@ -60,6 +61,7 @@
 		AD281CDB21D28CA900B56C88 /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
 		AD281CDD21D28D3800B56C88 /* Sex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sex.swift; sourceTree = "<group>"; };
 		AD281CDF21D298C300B56C88 /* Extentions+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extentions+UIViewController.swift"; sourceTree = "<group>"; };
+		AD281CE221D2DAF400B56C88 /* AuthManeger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManeger.swift; sourceTree = "<group>"; };
 		AD6C08D321CCF50B000DCDA7 /* Extentions+ UIVIews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extentions+ UIVIews.swift"; sourceTree = "<group>"; };
 		AD6C08D521CD0008000DCDA7 /* Extentions+NSLayautConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extentions+NSLayautConstraint.swift"; sourceTree = "<group>"; };
 		AD6C08DA21CD08A5000DCDA7 /* InfoUserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoUserTableViewCell.swift; sourceTree = "<group>"; };
@@ -143,6 +145,14 @@
 				AD281CDD21D28D3800B56C88 /* Sex.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		AD281CE121D2DAAC00B56C88 /* Manegers */ = {
+			isa = PBXGroup;
+			children = (
+				AD281CE221D2DAF400B56C88 /* AuthManeger.swift */,
+			);
+			path = Manegers;
 			sourceTree = "<group>";
 		};
 		AD6C08D221CCF494000DCDA7 /* Extentions */ = {
@@ -255,6 +265,7 @@
 			isa = PBXGroup;
 			children = (
 				ADC7511C21CA87EC00344810 /* AppDelegate.swift */,
+				AD281CE121D2DAAC00B56C88 /* Manegers */,
 				AD281CDA21D28C5400B56C88 /* Models */,
 				AD6C08D221CCF494000DCDA7 /* Extentions */,
 				ADC7515221CC39EF00344810 /* Protocols */,
@@ -533,6 +544,7 @@
 				AD281CDC21D28CA900B56C88 /* RegisterModel.swift in Sources */,
 				AD6C08EB21CE84E2000DCDA7 /* HeaderTitleView.swift in Sources */,
 				AD6C08D421CCF50B000DCDA7 /* Extentions+ UIVIews.swift in Sources */,
+				AD281CE321D2DAF400B56C88 /* AuthManeger.swift in Sources */,
 				AD6C08FA21CEB765000DCDA7 /* TextTableViewCell.swift in Sources */,
 				AD6C08FF21CEC943000DCDA7 /* TextFieldCellTableViewCell.swift in Sources */,
 				ADC7514F21CC387300344810 /* PhotoView.swift in Sources */,

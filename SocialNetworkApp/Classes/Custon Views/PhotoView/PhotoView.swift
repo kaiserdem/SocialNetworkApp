@@ -12,6 +12,7 @@ final class PhotoView: UIView, NibLoadable {
     
     private let plusView = UIImageView()
     private let lable = UILabel()
+    private var imageView = UIImageView()
     
     var clicked: VoidClosure? // кложер по нажатию
     
@@ -20,11 +21,30 @@ final class PhotoView: UIView, NibLoadable {
         Decorator.decorator(self)
         addLable()
         addPlusView()
+        addImageView()
+        clipsToBounds = true
     }
+    
     // нажатие на екрен закончилось
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesBegan(touches, with: event)
+        super.touchesEnded(touches, with: event)
         clicked?() // вызываем функцию
+    }
+    func set(image: UIImage?) {
+        imageView.image = image
+        imageView.isHidden = image == nil // показать если картинка не нил
+        
+    }
+    private func addImageView() { // добавления картинки
+        // для добавления констренов через код
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.isHidden = true // изначально фото не видно
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
+        addSubview(imageView)
+        
+        let constrains = NSLayoutConstraint.constraints(withNewVisyalFormat: "H:|[imageView]|,V:[imageView]|", dict: ["imageView": imageView])
+        addConstraints(constrains)
     }
     
     private func addLable() {
@@ -66,6 +86,7 @@ extension PhotoView {
         
         static func layoutSubviews(_ view: PhotoView) {
             view.round()
+           // view.imageView.round()
         }
     }
 }

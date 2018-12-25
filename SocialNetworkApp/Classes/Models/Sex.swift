@@ -10,5 +10,5 @@ import Foundation
 
 enum Sex: String {
     case male
-    case famele
+    case female
 }

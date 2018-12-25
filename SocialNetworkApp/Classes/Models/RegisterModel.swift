@@ -21,4 +21,13 @@ class RegisterModel {
         }
         return true
     }
+    var dict:[String: Any] { // cловарь должен возвращать проперти
+        return [
+        "email": password ?? "",
+        "password": password ?? "",
+        "sex": sex.rawValue,
+        "birthday": (birthday ?? Date()).timeIntervalSince1970
+    ]
+
+    }
 }

@@ -13,7 +13,8 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     private let models: [HeaderModel] = [.info, .sex, .birthday]
-    private var registerModel = RegisterModel()
+    private let sexModels: [Sex] = [.male, .female] 
+    private var registerModel = RegisterModel() // переменная для обращения к модели
     private let datePickerView: UIDatePicker = { //скобки для инициализации переменной сразу
         let picker = UIDatePicker()
         picker.maximumDate = Date()
@@ -29,29 +30,39 @@ class RegisterViewController: UIViewController {
         delegating()
         configureDatePickerView()
         addRigthBarButton()
+        updateDoneButtonStatus()
     }
     
     private func addRigthBarButton() { // Правая кнопка нав бара
         let barButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(rigthBarButtonClicked(sender:)))
         navigationItem.rightBarButtonItem = barButton
     }
-    
-    @objc func rigthBarButtonClicked(sender: UIBarButtonItem) {
-        guard registerModel.isFilled else {
-            showAlert(with: "Error", and: "Fill in all fields")
-            return
-        }
+    private func updateDoneButtonStatus() { // кнопка не работате когда поля не заполнены
+        navigationItem.rightBarButtonItem?.isEnabled = registerModel.isFilled
     }
     
-    private func configureDatePickerView () { // пикер вю
+    @objc func rigthBarButtonClicked(sender: UIBarButtonItem) {
+//        guard registerModel.isFilled else {
+//            showAlert(with: "Error", and: "Fill in all fields")
+//            return
+//        }
+        
+        
+        self.showAlert(with: registerModel.email ?? "", and: registerModel.password ?? "")
+        
+    }
+    
+    private func configureDatePickerView () { // пикер вю, выбор даты
         datePickerView.addTarget(self, action: #selector(datePickerChanged(sender:)), for: .valueChanged)
     }
     @objc private func datePickerChanged(sender: UIDatePicker) {
         let date = sender.date
         print(date)
+        registerModel.birthday = date // записали дату
+        updateDoneButtonStatus()
     }
 
-    private func delegating() { // подпимали делегат и дата сорс
+    private func delegating() { // подпиcали делегат и дата сорс
         tableView.delegate = self
         tableView.dataSource = self
     }
@@ -64,6 +75,8 @@ class RegisterViewController: UIViewController {
     private func photoViewClicked() { // нажатие на фото
         let imagePickerController = UIImagePickerController()
         imagePickerController.delegate = self
+        imagePickerController.sourceType = .photoLibrary // выбрать из раздела
+        present(imagePickerController, animated: true, completion: nil) // показать
         
     }
     
@@ -75,10 +88,15 @@ class RegisterViewController: UIViewController {
     }
 }
 extension RegisterViewController:UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+    // был сделан выбор фото
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        guard let image = info[UIImagePickerController.InfoKey.originalImage] else {
+        picker.dismiss(animated: true, completion: nil)
+        guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else {
             return
         }
+        self.registerModel.photo = image // выбор картинки
+        updateDoneButtonStatus()
+        tableView.reloadData() // обновить таблицу
     }
 }
 extension RegisterViewController {
@@ -155,14 +173,29 @@ extension RegisterViewController: UITableViewDataSource {
         switch model {
         case .userInfo:
             if let cell = tableView.dequeueReusableCell(withIdentifier: InfoUserTableViewCell.name, for: indexPath) as? InfoUserTableViewCell {
+                cell.topTextChanged = { //при изменениях текста меняеться данные модели
+                    text in
+                    self.registerModel.email = text
+                    self.updateDoneButtonStatus()
+                }
+                cell.bottomTextChanged = {
+                    text in
+                    self.registerModel.password = text
+                    self.updateDoneButtonStatus()
+                }
                 cell.photoViewClicked = self.photoViewClicked
+                cell.set(image: registerModel.photo)
                 return cell
             }
         case .sex:
             if let cell = tableView.dequeueReusableCell(withIdentifier: SegmentedTableViewCell.name, for: indexPath) as? SegmentedTableViewCell {
+                // поставили название сагментам
+                cell.set(titels: sexModels.map{$0.rawValue.capitalized})
                 cell.indexChanged = {
                     index in
-                    print(index)
+                    let sex  = self.sexModels[index]
+                    self.registerModel.sex = sex
+                    self.updateDoneButtonStatus()
                 }
                 return cell
             }
