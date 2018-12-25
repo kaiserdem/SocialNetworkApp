@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4685DB0EE98CA28C69DA9DB0 /* Pods_SocialNetworkAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D4C99429CA8776617EA0195 /* Pods_SocialNetworkAppTests.framework */; };
 		62C2AD75A47CD95D85D396B1 /* Pods_SocialNetworkApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CDFAB8565889A12AFDB7126 /* Pods_SocialNetworkApp.framework */; };
 		AD281CDC21D28CA900B56C88 /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD281CDB21D28CA900B56C88 /* RegisterModel.swift */; };
 		AD281CDE21D28D3800B56C88 /* Sex.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD281CDD21D28D3800B56C88 /* Sex.swift */; };
 		AD281CE021D298C300B56C88 /* Extentions+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD281CDF21D298C300B56C88 /* Extentions+UIViewController.swift */; };
 		AD281CE321D2DAF400B56C88 /* AuthManeger.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD281CE221D2DAF400B56C88 /* AuthManeger.swift */; };
+		AD281CE621D2E28A00B56C88 /* Utilites.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD281CE521D2E28A00B56C88 /* Utilites.swift */; };
 		AD6C08D421CCF50B000DCDA7 /* Extentions+ UIVIews.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6C08D321CCF50B000DCDA7 /* Extentions+ UIVIews.swift */; };
 		AD6C08D621CD0008000DCDA7 /* Extentions+NSLayautConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6C08D521CD0008000DCDA7 /* Extentions+NSLayautConstraint.swift */; };
 		AD6C08DC21CD08A5000DCDA7 /* InfoUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6C08DA21CD08A5000DCDA7 /* InfoUserTableViewCell.swift */; };
@@ -55,13 +55,13 @@
 
 /* Begin PBXFileReference section */
 		0FD61C5288F3F79745472B2E /* Pods-SocialNetworkApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialNetworkApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SocialNetworkApp/Pods-SocialNetworkApp.debug.xcconfig"; sourceTree = "<group>"; };
-		1C63EF3D8F3F663FBE312294 /* Pods-SocialNetworkAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialNetworkAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SocialNetworkAppTests/Pods-SocialNetworkAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5CDFAB8565889A12AFDB7126 /* Pods_SocialNetworkApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialNetworkApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D4C99429CA8776617EA0195 /* Pods_SocialNetworkAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialNetworkAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD281CDB21D28CA900B56C88 /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
 		AD281CDD21D28D3800B56C88 /* Sex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sex.swift; sourceTree = "<group>"; };
 		AD281CDF21D298C300B56C88 /* Extentions+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extentions+UIViewController.swift"; sourceTree = "<group>"; };
 		AD281CE221D2DAF400B56C88 /* AuthManeger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManeger.swift; sourceTree = "<group>"; };
+		AD281CE521D2E28A00B56C88 /* Utilites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilites.swift; sourceTree = "<group>"; };
 		AD6C08D321CCF50B000DCDA7 /* Extentions+ UIVIews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extentions+ UIVIews.swift"; sourceTree = "<group>"; };
 		AD6C08D521CD0008000DCDA7 /* Extentions+NSLayautConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extentions+NSLayautConstraint.swift"; sourceTree = "<group>"; };
 		AD6C08DA21CD08A5000DCDA7 /* InfoUserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoUserTableViewCell.swift; sourceTree = "<group>"; };
@@ -95,7 +95,6 @@
 		ADC7514E21CC387300344810 /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
 		ADC7515321CC3A2300344810 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		E3D7D6C1B6CD662996E12FCE /* Pods-SocialNetworkApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialNetworkApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialNetworkApp/Pods-SocialNetworkApp.release.xcconfig"; sourceTree = "<group>"; };
-		F2861899D74557FF49BF1811 /* Pods-SocialNetworkAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialNetworkAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialNetworkAppTests/Pods-SocialNetworkAppTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +110,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4685DB0EE98CA28C69DA9DB0 /* Pods_SocialNetworkAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,8 +130,6 @@
 			children = (
 				0FD61C5288F3F79745472B2E /* Pods-SocialNetworkApp.debug.xcconfig */,
 				E3D7D6C1B6CD662996E12FCE /* Pods-SocialNetworkApp.release.xcconfig */,
-				1C63EF3D8F3F663FBE312294 /* Pods-SocialNetworkAppTests.debug.xcconfig */,
-				F2861899D74557FF49BF1811 /* Pods-SocialNetworkAppTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -153,6 +149,14 @@
 				AD281CE221D2DAF400B56C88 /* AuthManeger.swift */,
 			);
 			path = Manegers;
+			sourceTree = "<group>";
+		};
+		AD281CE421D2E25000B56C88 /* Help Fiels */ = {
+			isa = PBXGroup;
+			children = (
+				AD281CE521D2E28A00B56C88 /* Utilites.swift */,
+			);
+			path = "Help Fiels";
 			sourceTree = "<group>";
 		};
 		AD6C08D221CCF494000DCDA7 /* Extentions */ = {
@@ -265,6 +269,7 @@
 			isa = PBXGroup;
 			children = (
 				ADC7511C21CA87EC00344810 /* AppDelegate.swift */,
+				AD281CE421D2E25000B56C88 /* Help Fiels */,
 				AD281CE121D2DAAC00B56C88 /* Manegers */,
 				AD281CDA21D28C5400B56C88 /* Models */,
 				AD6C08D221CCF494000DCDA7 /* Extentions */,
@@ -377,7 +382,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ADC7513921CA87EE00344810 /* Build configuration list for PBXNativeTarget "SocialNetworkAppTests" */;
 			buildPhases = (
-				C433FF65BEFD4ACDEC90D9B6 /* [CP] Check Pods Manifest.lock */,
 				ADC7512921CA87EE00344810 /* Sources */,
 				ADC7512A21CA87EE00344810 /* Frameworks */,
 				ADC7512B21CA87EE00344810 /* Resources */,
@@ -489,41 +493,23 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SocialNetworkApp/Pods-SocialNetworkApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SocialNetworkApp/Pods-SocialNetworkApp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C433FF65BEFD4ACDEC90D9B6 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SocialNetworkAppTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -537,6 +523,7 @@
 				AD6C08EF21CE88E0000DCDA7 /* CellHeaderProtocol.swift in Sources */,
 				ADC7511F21CA87EC00344810 /* ViewController.swift in Sources */,
 				AD6C08D621CD0008000DCDA7 /* Extentions+NSLayautConstraint.swift in Sources */,
+				AD281CE621D2E28A00B56C88 /* Utilites.swift in Sources */,
 				AD6C08DC21CD08A5000DCDA7 /* InfoUserTableViewCell.swift in Sources */,
 				ADC7514A21CC361900344810 /* RegisterViewController.swift in Sources */,
 				ADC7515421CC3A2300344810 /* NibLoadable.swift in Sources */,
@@ -745,7 +732,6 @@
 		};
 		ADC7513A21CA87EE00344810 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1C63EF3D8F3F663FBE312294 /* Pods-SocialNetworkAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -767,7 +753,6 @@
 		};
 		ADC7513B21CA87EE00344810 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F2861899D74557FF49BF1811 /* Pods-SocialNetworkAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
