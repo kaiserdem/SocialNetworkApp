@@ -11,13 +11,19 @@ import UIKit
 class InfoUserTableViewCell: UITableViewCell, StaticCellProtocol {
 
     @IBOutlet private weak var backgroundFieldView: UIView!
-    static var heigth: CGFloat {
-       // return UITableView.automaticDimension
+    
+    @IBOutlet private weak var photoView: PhotoView! // аутлет фотографии
+
+    static var heigth: CGFloat { // высота
         return 100
     }
+    var photoViewClicked: VoidClosure?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        
         Decoretor.decorator(cell: self)
+        photoView.clicked = photoViewClicked // нажатие на фото
     }
 }
 extension InfoUserTableViewCell {

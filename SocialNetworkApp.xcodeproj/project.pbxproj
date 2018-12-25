@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		4685DB0EE98CA28C69DA9DB0 /* Pods_SocialNetworkAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D4C99429CA8776617EA0195 /* Pods_SocialNetworkAppTests.framework */; };
 		62C2AD75A47CD95D85D396B1 /* Pods_SocialNetworkApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CDFAB8565889A12AFDB7126 /* Pods_SocialNetworkApp.framework */; };
+		AD281CDC21D28CA900B56C88 /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD281CDB21D28CA900B56C88 /* RegisterModel.swift */; };
+		AD281CDE21D28D3800B56C88 /* Sex.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD281CDD21D28D3800B56C88 /* Sex.swift */; };
+		AD281CE021D298C300B56C88 /* Extentions+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD281CDF21D298C300B56C88 /* Extentions+UIViewController.swift */; };
 		AD6C08D421CCF50B000DCDA7 /* Extentions+ UIVIews.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6C08D321CCF50B000DCDA7 /* Extentions+ UIVIews.swift */; };
 		AD6C08D621CD0008000DCDA7 /* Extentions+NSLayautConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6C08D521CD0008000DCDA7 /* Extentions+NSLayautConstraint.swift */; };
 		AD6C08DC21CD08A5000DCDA7 /* InfoUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6C08DA21CD08A5000DCDA7 /* InfoUserTableViewCell.swift */; };
@@ -54,6 +57,9 @@
 		1C63EF3D8F3F663FBE312294 /* Pods-SocialNetworkAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialNetworkAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SocialNetworkAppTests/Pods-SocialNetworkAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5CDFAB8565889A12AFDB7126 /* Pods_SocialNetworkApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialNetworkApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D4C99429CA8776617EA0195 /* Pods_SocialNetworkAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialNetworkAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD281CDB21D28CA900B56C88 /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
+		AD281CDD21D28D3800B56C88 /* Sex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sex.swift; sourceTree = "<group>"; };
+		AD281CDF21D298C300B56C88 /* Extentions+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extentions+UIViewController.swift"; sourceTree = "<group>"; };
 		AD6C08D321CCF50B000DCDA7 /* Extentions+ UIVIews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extentions+ UIVIews.swift"; sourceTree = "<group>"; };
 		AD6C08D521CD0008000DCDA7 /* Extentions+NSLayautConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extentions+NSLayautConstraint.swift"; sourceTree = "<group>"; };
 		AD6C08DA21CD08A5000DCDA7 /* InfoUserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoUserTableViewCell.swift; sourceTree = "<group>"; };
@@ -130,10 +136,20 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		AD281CDA21D28C5400B56C88 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AD281CDB21D28CA900B56C88 /* RegisterModel.swift */,
+				AD281CDD21D28D3800B56C88 /* Sex.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		AD6C08D221CCF494000DCDA7 /* Extentions */ = {
 			isa = PBXGroup;
 			children = (
 				AD6C08D321CCF50B000DCDA7 /* Extentions+ UIVIews.swift */,
+				AD281CDF21D298C300B56C88 /* Extentions+UIViewController.swift */,
 				AD6C08D521CD0008000DCDA7 /* Extentions+NSLayautConstraint.swift */,
 			);
 			path = Extentions;
@@ -239,6 +255,7 @@
 			isa = PBXGroup;
 			children = (
 				ADC7511C21CA87EC00344810 /* AppDelegate.swift */,
+				AD281CDA21D28C5400B56C88 /* Models */,
 				AD6C08D221CCF494000DCDA7 /* Extentions */,
 				ADC7515221CC39EF00344810 /* Protocols */,
 				ADC7514221CA987E00344810 /* Routers */,
@@ -513,11 +530,14 @@
 				ADC7514A21CC361900344810 /* RegisterViewController.swift in Sources */,
 				ADC7515421CC3A2300344810 /* NibLoadable.swift in Sources */,
 				ADC7514421CA999600344810 /* Router.swift in Sources */,
+				AD281CDC21D28CA900B56C88 /* RegisterModel.swift in Sources */,
 				AD6C08EB21CE84E2000DCDA7 /* HeaderTitleView.swift in Sources */,
 				AD6C08D421CCF50B000DCDA7 /* Extentions+ UIVIews.swift in Sources */,
 				AD6C08FA21CEB765000DCDA7 /* TextTableViewCell.swift in Sources */,
 				AD6C08FF21CEC943000DCDA7 /* TextFieldCellTableViewCell.swift in Sources */,
 				ADC7514F21CC387300344810 /* PhotoView.swift in Sources */,
+				AD281CDE21D28D3800B56C88 /* Sex.swift in Sources */,
+				AD281CE021D298C300B56C88 /* Extentions+UIViewController.swift in Sources */,
 				AD6C08E421CD11E6000DCDA7 /* Typealiases.swift in Sources */,
 				ADC7511D21CA87EC00344810 /* AppDelegate.swift in Sources */,
 				AD6C08E221CD113F000DCDA7 /* HeigtContainable.swift in Sources */,

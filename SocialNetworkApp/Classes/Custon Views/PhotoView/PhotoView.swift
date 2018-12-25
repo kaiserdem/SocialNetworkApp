@@ -13,11 +13,18 @@ final class PhotoView: UIView, NibLoadable {
     private let plusView = UIImageView()
     private let lable = UILabel()
     
+    var clicked: VoidClosure? // кложер по нажатию
+    
     override func didMoveToSuperview() {
         super.didMoveToSuperview()
         Decorator.decorator(self)
         addLable()
         addPlusView()
+    }
+    // нажатие на екрен закончилось
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        clicked?() // вызываем функцию
     }
     
     private func addLable() {
