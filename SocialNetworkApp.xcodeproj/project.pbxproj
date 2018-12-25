@@ -162,8 +162,8 @@
 		AD6C08F121CEA506000DCDA7 /* Info User Cell */ = {
 			isa = PBXGroup;
 			children = (
-				AD6C08DB21CD08A5000DCDA7 /* InfoUserTableViewCell.xib */,
 				AD6C08DA21CD08A5000DCDA7 /* InfoUserTableViewCell.swift */,
+				AD6C08DB21CD08A5000DCDA7 /* InfoUserTableViewCell.xib */,
 			);
 			path = "Info User Cell";
 			sourceTree = "<group>";

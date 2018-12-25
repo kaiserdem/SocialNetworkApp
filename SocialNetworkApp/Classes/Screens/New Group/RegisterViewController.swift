@@ -104,7 +104,7 @@ extension RegisterViewController: UITableViewDelegate {
 
 extension RegisterViewController: UITableViewDataSource {
     
-    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerModel = models[section]
         switch headerModel {
         case .sex:
@@ -113,7 +113,8 @@ extension RegisterViewController: UITableViewDataSource {
             return view
         default: return nil
         }
-    }    // высота отступа ячейки
+    }
+                       // высота отступа ячейки
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         let headerModel = models[section]
         switch headerModel {
@@ -122,7 +123,7 @@ extension RegisterViewController: UITableViewDataSource {
         default: return 0
         }
     }
-    // вызываем зарегестрированию ячейку
+    // вызываем зарегестрированию ячейку и нужными елементами класса
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let model = models[indexPath.section].cellModels[indexPath.row]
         switch model {

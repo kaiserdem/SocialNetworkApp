@@ -25,12 +25,8 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mmQ-fC-kjo">
-                    <rect key="frame" x="16" y="52" width="343" height="156"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SNK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u9Q-K7-boR">
-                    <rect key="frame" x="16" y="224" width="343" height="47"/>
+                    <rect key="frame" x="16" y="310" width="343" height="47"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
                     <color key="textColor" red="0.9081903861822902" green="0.93348159805558362" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -60,9 +56,17 @@
                         <color key="titleColor" name="blueColor"/>
                     </state>
                 </button>
+                <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="language" translatesAutoresizingMaskIntoConstraints="NO" id="mmQ-fC-kjo">
+                    <rect key="frame" x="16" y="107" width="343" height="156"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="156" id="Pz4-r1-vV4"/>
+                        <constraint firstAttribute="width" constant="343" id="oJj-xs-sw5"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" name="blueColor"/>
             <constraints>
+                <constraint firstItem="mmQ-fC-kjo" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="7aV-Rm-M6t"/>
                 <constraint firstItem="9PD-Sb-zEO" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="8ar-UF-fz0"/>
                 <constraint firstItem="o7r-uH-Y7d" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="G6z-vo-DfG"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="o7r-uH-Y7d" secondAttribute="bottom" constant="32" id="Gaa-RN-QsO"/>
@@ -70,6 +74,8 @@
                 <constraint firstItem="o7r-uH-Y7d" firstAttribute="top" secondItem="9PD-Sb-zEO" secondAttribute="bottom" constant="16" id="O7b-Gh-x6U"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="o7r-uH-Y7d" secondAttribute="trailing" constant="16" id="dH8-gy-cn7"/>
                 <constraint firstItem="9PD-Sb-zEO" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="jNM-yf-MZj"/>
+                <constraint firstItem="mmQ-fC-kjo" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="87" id="nnU-je-VxE"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="mmQ-fC-kjo" secondAttribute="trailing" constant="16" id="qyh-1d-Yaj"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="9PD-Sb-zEO" secondAttribute="trailing" constant="16" id="wwW-8f-Def"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
@@ -77,6 +83,7 @@
         </view>
     </objects>
     <resources>
+        <image name="language" width="480" height="480"/>
         <namedColor name="blueColor">
             <color red="0.29803921568627451" green="0.45882352941176469" blue="0.63921568627450975" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
