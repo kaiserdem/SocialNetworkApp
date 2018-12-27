@@ -43,7 +43,9 @@ class RegisterViewController: UIViewController {
     }
     
     @objc func rigthBarButtonClicked(sender: UIBarButtonItem) {
+        ARSLineProgress.show()
         AuthManeger.shared.register(with: registerModel) { result in
+            ARSLineProgress.hide()
             switch result {
             case .success(_):
                 self.showAlert(with: "Ready", and: "You are registered")

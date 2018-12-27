@@ -8,14 +8,18 @@
 
 import UIKit
 
-final class StartRouter {
+final class StartRouter { // вызывает контроллер
     static let shared = StartRouter()
     
     private init() {} // закрываем возможность инициализироваться
     
-    func goToRegisterScreen(from source: UIViewController) {
+    func goToRegisterScreen(from source: UIViewController) { // показывает контроллер
         let vc = RegisterViewController()
-        print("RegisterViewController")
         source.navigationController?.pushViewController(vc, animated: true)
+    }
+    func goToLoginScreen(from source: UIViewController){
+        let vc = LoginViewController()
+        source.navigationController?.pushViewController(vc, animated: true)
+
     }
 }

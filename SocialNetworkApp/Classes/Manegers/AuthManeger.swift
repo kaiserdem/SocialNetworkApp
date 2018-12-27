@@ -13,6 +13,7 @@ import FirebaseStorage
 import FirebaseAuth
 
 class AuthManeger {
+    var currentUser: User?   // текущий пользователь
     static let shared = AuthManeger()
     private init() {}
     
@@ -26,6 +27,22 @@ class AuthManeger {
     
     private let auth = Auth.auth()
 
+    // функция для автозации, возвр кожер с результатом
+    func  singIn(with email: String, and password: String, completion:@escaping  ItemClosure<AuthResult>) {
+        auth.signIn(withEmail: email, password: password) { (result, error) in
+            if let error = error {
+                completion(AuthResult.error(error.localizedDescription))
+                return
+            }
+            guard let user = result?.user else { // проверка пользователя
+                completion(AuthResult.error("User not exist"))
+                return
+            }
+            self.currentUser = user
+            completion(AuthResult.success)
+        }
+    }
+    
            // загружает модель данных
     func register(with model: RegisterModel, completion: @escaping ResultHandler<Void>) {
         // создаем модель нового пользователя ветки пользователя

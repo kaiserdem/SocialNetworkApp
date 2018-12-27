@@ -35,7 +35,7 @@ class ViewController: UIViewController {
         
     }
     @objc private func singInButtonCliced() {
-        
+        StartRouter.shared.goToLoginScreen(from: self) // показываем контроллер
     }
     @objc private func registerButtonCliced() {
         StartRouter.shared.goToRegisterScreen(from: self)
@@ -43,7 +43,7 @@ class ViewController: UIViewController {
 
 }
 
-extension ViewController {// расшинеие сласса
+extension ViewController {
     fileprivate class Decorator { // приватный класс
         static let buttonCornerRadius: CGFloat = 8
         private init() {}
