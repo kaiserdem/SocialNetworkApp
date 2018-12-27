@@ -41,6 +41,9 @@
 		ADC7514B21CC361900344810 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADC7514921CC361900344810 /* RegisterViewController.xib */; };
 		ADC7514F21CC387300344810 /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC7514E21CC387300344810 /* PhotoView.swift */; };
 		ADC7515421CC3A2300344810 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC7515321CC3A2300344810 /* NibLoadable.swift */; };
+		ADD04D3721D4FF7600636B9A /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD04D3621D4FF7600636B9A /* CustomError.swift */; };
+		ADD04D3921D4FFFC00636B9A /* CustomErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD04D3821D4FFFC00636B9A /* CustomErrors.swift */; };
+		ADD04D3B21D5004300636B9A /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD04D3A21D5004300636B9A /* Validator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +97,9 @@
 		ADC7514921CC361900344810 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		ADC7514E21CC387300344810 /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
 		ADC7515321CC3A2300344810 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
+		ADD04D3621D4FF7600636B9A /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
+		ADD04D3821D4FFFC00636B9A /* CustomErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomErrors.swift; sourceTree = "<group>"; };
+		ADD04D3A21D5004300636B9A /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		E3D7D6C1B6CD662996E12FCE /* Pods-SocialNetworkApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialNetworkApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialNetworkApp/Pods-SocialNetworkApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -138,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				AD281CDB21D28CA900B56C88 /* RegisterModel.swift */,
+				ADD04D3621D4FF7600636B9A /* CustomError.swift */,
 				AD281CDD21D28D3800B56C88 /* Sex.swift */,
 			);
 			path = Models;
@@ -155,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				AD281CE521D2E28A00B56C88 /* Utilites.swift */,
+				ADD04D3A21D5004300636B9A /* Validator.swift */,
 			);
 			path = "Help Fiels";
 			sourceTree = "<group>";
@@ -350,6 +358,7 @@
 			children = (
 				ADC7515321CC3A2300344810 /* NibLoadable.swift */,
 				AD6C08E321CD11E6000DCDA7 /* Typealiases.swift */,
+				ADD04D3821D4FFFC00636B9A /* CustomErrors.swift */,
 				AD6C08E121CD113F000DCDA7 /* HeigtContainable.swift */,
 				AD6C08EE21CE88E0000DCDA7 /* CellHeaderProtocol.swift */,
 			);
@@ -519,6 +528,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADD04D3721D4FF7600636B9A /* CustomError.swift in Sources */,
 				AD6C08F521CEA5E8000DCDA7 /* SegmentedTableViewCell.swift in Sources */,
 				AD6C08EF21CE88E0000DCDA7 /* CellHeaderProtocol.swift in Sources */,
 				ADC7511F21CA87EC00344810 /* ViewController.swift in Sources */,
@@ -531,6 +541,7 @@
 				AD281CDC21D28CA900B56C88 /* RegisterModel.swift in Sources */,
 				AD6C08EB21CE84E2000DCDA7 /* HeaderTitleView.swift in Sources */,
 				AD6C08D421CCF50B000DCDA7 /* Extentions+ UIVIews.swift in Sources */,
+				ADD04D3921D4FFFC00636B9A /* CustomErrors.swift in Sources */,
 				AD281CE321D2DAF400B56C88 /* AuthManeger.swift in Sources */,
 				AD6C08FA21CEB765000DCDA7 /* TextTableViewCell.swift in Sources */,
 				AD6C08FF21CEC943000DCDA7 /* TextFieldCellTableViewCell.swift in Sources */,
@@ -539,6 +550,7 @@
 				AD281CE021D298C300B56C88 /* Extentions+UIViewController.swift in Sources */,
 				AD6C08E421CD11E6000DCDA7 /* Typealiases.swift in Sources */,
 				ADC7511D21CA87EC00344810 /* AppDelegate.swift in Sources */,
+				ADD04D3B21D5004300636B9A /* Validator.swift in Sources */,
 				AD6C08E221CD113F000DCDA7 /* HeigtContainable.swift in Sources */,
 				ADC7514621CC28FE00344810 /* StartRouter.swift in Sources */,
 			);
@@ -625,7 +637,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -680,7 +692,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

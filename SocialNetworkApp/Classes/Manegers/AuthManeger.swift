@@ -22,18 +22,38 @@ class AuthManeger {
     }
     private let auth = Auth.auth()
 
-    func register(with model: RegisterModel, completion: VoidClosure) { // загружает модель данных
+           // загружает модель данных
+    func register(with model: RegisterModel, completion: @escaping ResultHandler<Void>) {
         // создаем модель нового пользователя ветки пользователя
         guard model.isFilled else { // с условием не пустых полей
+            completion(.failure(CustomErrors.unknownError))
             return
         }
         guard let email = model.email, let password = model.password else {
+            completion(.failure(CustomErrors.unknownError))
             return
         }
+        /// eazy validation for @ and dot localy. other ones are on the server
+        guard Validators.isSimpleEmail(email) else {
+            completion(.failure(CustomErrors.invalidEmail))
+            return
+        }
+
         let userRef = sourseRef.child("users")
-        let id = ID()
+        let id = UUID.init().uuidString
         auth.createUser(withEmail: email, password: password) { (result, error) in
-            userRef.child(id)
+            if let error = error {
+                completion(.failure(error))
+            } else if let _ = result {
+                
+                var dict = model.dict
+                dict["id"] = id
+                userRef.child(id).setValue(dict)
+                completion(.success(()))
+            } else {
+                completion(.failure(CustomErrors.unknownError))
+            }
         }
     }
 }
+

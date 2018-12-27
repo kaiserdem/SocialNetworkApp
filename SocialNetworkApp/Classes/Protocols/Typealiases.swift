@@ -13,3 +13,5 @@ typealias StaticCellProtocol = NibLoadable & HeigtContainable
 typealias ItemClosure<T> = ((T) -> Void) // дженерик
 
 typealias VoidClosure = (() -> Void) // клоужер
+
+typealias ResultHandler<Value> = (Result<Value>) -> Void
