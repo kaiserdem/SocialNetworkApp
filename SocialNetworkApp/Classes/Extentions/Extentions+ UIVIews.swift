@@ -9,7 +9,7 @@
 import UIKit
 
 extension UIView {
-    func round() {
+    func round() { // круговые вю
         layer.cornerRadius = frame.height / 2
     }
 }

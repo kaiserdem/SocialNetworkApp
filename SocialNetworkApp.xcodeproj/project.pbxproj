@@ -49,6 +49,10 @@
 		ADD04D4321D5402E00636B9A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD04D4121D5402E00636B9A /* LoginViewController.swift */; };
 		ADD04D4421D5402E00636B9A /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADD04D4221D5402E00636B9A /* LoginViewController.xib */; };
 		ADD04D4721D5478400636B9A /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD04D4621D5478400636B9A /* TextField.swift */; };
+		ADD04D4B21D5527D00636B9A /* FeadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD04D4921D5527D00636B9A /* FeadViewController.swift */; };
+		ADD04D4C21D5527D00636B9A /* FeadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADD04D4A21D5527D00636B9A /* FeadViewController.xib */; };
+		ADD04D4F21D5538300636B9A /* UserHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADD04D4E21D5538300636B9A /* UserHeaderView.xib */; };
+		ADD04D5121D574B800636B9A /* UserHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD04D5021D574B800636B9A /* UserHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +114,10 @@
 		ADD04D4121D5402E00636B9A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		ADD04D4221D5402E00636B9A /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		ADD04D4621D5478400636B9A /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		ADD04D4921D5527D00636B9A /* FeadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeadViewController.swift; sourceTree = "<group>"; };
+		ADD04D4A21D5527D00636B9A /* FeadViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeadViewController.xib; sourceTree = "<group>"; };
+		ADD04D4E21D5538300636B9A /* UserHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserHeaderView.xib; sourceTree = "<group>"; };
+		ADD04D5021D574B800636B9A /* UserHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHeaderView.swift; sourceTree = "<group>"; };
 		E3D7D6C1B6CD662996E12FCE /* Pods-SocialNetworkApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialNetworkApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialNetworkApp/Pods-SocialNetworkApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -313,6 +321,7 @@
 		ADC7514021CA981D00344810 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				ADD04D4821D5519300636B9A /* Fead */,
 				ADD04D4021D53FFA00636B9A /* Login */,
 				ADC7514721CC33FC00344810 /* Register */,
 				ADC7514121CA983100344810 /* Start */,
@@ -351,6 +360,7 @@
 		ADC7514C21CC378C00344810 /* Custon Views */ = {
 			isa = PBXGroup;
 			children = (
+				ADD04D4D21D5535800636B9A /* User Header */,
 				ADD04D4521D5474400636B9A /* Text Fielsd */,
 				AD6C08E921CE849D000DCDA7 /* Header Titel View */,
 				AD6C08D721CD07D1000DCDA7 /* Cells */,
@@ -394,6 +404,24 @@
 				ADD04D4621D5478400636B9A /* TextField.swift */,
 			);
 			path = "Text Fielsd";
+			sourceTree = "<group>";
+		};
+		ADD04D4821D5519300636B9A /* Fead */ = {
+			isa = PBXGroup;
+			children = (
+				ADD04D4921D5527D00636B9A /* FeadViewController.swift */,
+				ADD04D4A21D5527D00636B9A /* FeadViewController.xib */,
+			);
+			path = Fead;
+			sourceTree = "<group>";
+		};
+		ADD04D4D21D5535800636B9A /* User Header */ = {
+			isa = PBXGroup;
+			children = (
+				ADD04D4E21D5538300636B9A /* UserHeaderView.xib */,
+				ADD04D5021D574B800636B9A /* UserHeaderView.swift */,
+			);
+			path = "User Header";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -483,8 +511,10 @@
 				AD6C08ED21CE8510000DCDA7 /* HeaderTitleView.xib in Resources */,
 				ADD04D4421D5402E00636B9A /* LoginViewController.xib in Resources */,
 				AD6C08F621CEA5E8000DCDA7 /* SegmentedTableViewCell.xib in Resources */,
+				ADD04D4F21D5538300636B9A /* UserHeaderView.xib in Resources */,
 				ADC7512721CA87EE00344810 /* LaunchScreen.storyboard in Resources */,
 				ADC7513D21CA8DEF00344810 /* ViewController.xib in Resources */,
+				ADD04D4C21D5527D00636B9A /* FeadViewController.xib in Resources */,
 				ADC7512421CA87EE00344810 /* Assets.xcassets in Resources */,
 				ADC7514B21CC361900344810 /* RegisterViewController.xib in Resources */,
 				AD6C090021CEC943000DCDA7 /* TextFieldCellTableViewCell.xib in Resources */,
@@ -562,8 +592,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADD04D4B21D5527D00636B9A /* FeadViewController.swift in Sources */,
 				ADD04D4321D5402E00636B9A /* LoginViewController.swift in Sources */,
 				ADD04D3721D4FF7600636B9A /* CustomError.swift in Sources */,
+				ADD04D5121D574B800636B9A /* UserHeaderView.swift in Sources */,
 				AD6C08F521CEA5E8000DCDA7 /* SegmentedTableViewCell.swift in Sources */,
 				ADD04D3F21D53C8200636B9A /* AuthResult.swift in Sources */,
 				AD6C08EF21CE88E0000DCDA7 /* CellHeaderProtocol.swift in Sources */,
