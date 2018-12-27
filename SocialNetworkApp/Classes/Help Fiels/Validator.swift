@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum Validators {
+enum Validators { // проверка
     static func isSimpleEmail(_ email: String) -> Bool {
         let emailRegEx = "^.+@.+\\..{2,}$"
         return check(text: email, regEx: emailRegEx)

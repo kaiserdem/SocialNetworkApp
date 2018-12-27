@@ -20,13 +20,11 @@ class StorageManager { // класс для работы с firebase Storage(м�
 
     // принимает фото, возвращает клоужер(опционально)
     func upload(photo: UIImage, by model: RegisterModel, closure: VoidClosure? = nil) {
-                        // фото уменьшаем в 0.5 раз
-        guard let data = photo.jpegData(compressionQuality: 0.5) else {
+        guard let data = photo.jpegData(compressionQuality: 0.5) else {//фото уменьш в 0.5раз
             return
         }
         // создаем ветку avatars
         sourseRef.child(Keys.avatars.rawValue).child(model.userId).putData(data, metadata: nil) { (metadata, error) in
-
             closure?()
         }
     }

@@ -47,8 +47,8 @@ class RegisterViewController: UIViewController {
             switch result {
             case .success(_):
                 self.showAlert(with: "Ready", and: "You are registered")
-            case .failure(let _):
-                self.showAlert(with: "Error", and: "Fill in all fields")
+            case .failure(let error):
+                self.showAlert(with: "Error", and: error.localizedDescription)
             }
         }
     }

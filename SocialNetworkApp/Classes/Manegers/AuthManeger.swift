@@ -48,7 +48,6 @@ class AuthManeger {
             if let error = error {
                 completion(.failure(error))
             } else if let _ = result {
-                
                 var dict = model.dict
                 dict["id"] = id
                 self.userRef.child(id).setValue(dict, withCompletionBlock: { (error, reference) in
@@ -67,7 +66,7 @@ class AuthManeger {
             guard let url = url else { // проверяем на нил
                 return
             } // нашли юзера по child, создаем новую ветку, записываем в базу
-            self.userRef.child(model.userId).child("avatarUrl").setValue(url)
+            self.userRef.child(model.userId).child("avatarUrl").setValue(url.absoluteString)
         }
     }
 }
