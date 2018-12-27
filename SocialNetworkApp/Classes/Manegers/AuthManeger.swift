@@ -20,6 +20,10 @@ class AuthManeger {
     private var sourseRef:DatabaseReference {
       return Database.database().reference()
     }
+    private var userRef: DatabaseReference {
+        return sourseRef.child("users")
+    }
+    
     private let auth = Auth.auth()
 
            // загружает модель данных
@@ -39,8 +43,7 @@ class AuthManeger {
             return
         }
 
-        let userRef = sourseRef.child("users")
-        let id = UUID.init().uuidString
+        let id = model.userId
         auth.createUser(withEmail: email, password: password) { (result, error) in
             if let error = error {
                 completion(.failure(error))
@@ -48,12 +51,23 @@ class AuthManeger {
                 
                 var dict = model.dict
                 dict["id"] = id
-                userRef.child(id).setValue(dict)
-                completion(.success(()))
+                self.userRef.child(id).setValue(dict, withCompletionBlock: { (error, reference) in
+                    self.addAvatarUrlNeeded(for: model)
+                    completion(.success(()))
+                })
             } else {
                 completion(.failure(CustomErrors.unknownError))
             }
         }
     }
+                  // добавляем ссылку на фото в бд
+    func addAvatarUrlNeeded(for model: RegisterModel) {
+        
+        StorageManager.shared.loadAvatarUrl(for: model) { (url) in // загружаем url
+            guard let url = url else { // проверяем на нил
+                return
+            } // нашли юзера по child, создаем новую ветку, записываем в базу
+            self.userRef.child(model.userId).child("avatarUrl").setValue(url)
+        }
+    }
 }
-

@@ -44,6 +44,7 @@
 		ADD04D3721D4FF7600636B9A /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD04D3621D4FF7600636B9A /* CustomError.swift */; };
 		ADD04D3921D4FFFC00636B9A /* CustomErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD04D3821D4FFFC00636B9A /* CustomErrors.swift */; };
 		ADD04D3B21D5004300636B9A /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD04D3A21D5004300636B9A /* Validator.swift */; };
+		ADD04D3D21D5074D00636B9A /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD04D3C21D5074D00636B9A /* StorageManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +101,7 @@
 		ADD04D3621D4FF7600636B9A /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
 		ADD04D3821D4FFFC00636B9A /* CustomErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomErrors.swift; sourceTree = "<group>"; };
 		ADD04D3A21D5004300636B9A /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		ADD04D3C21D5074D00636B9A /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		E3D7D6C1B6CD662996E12FCE /* Pods-SocialNetworkApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialNetworkApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialNetworkApp/Pods-SocialNetworkApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -154,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				AD281CE221D2DAF400B56C88 /* AuthManeger.swift */,
+				ADD04D3C21D5074D00636B9A /* StorageManager.swift */,
 			);
 			path = Manegers;
 			sourceTree = "<group>";
@@ -276,12 +279,12 @@
 		ADC7513E21CA95C800344810 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				ADC7515221CC39EF00344810 /* Protocols */,
 				ADC7511C21CA87EC00344810 /* AppDelegate.swift */,
 				AD281CE421D2E25000B56C88 /* Help Fiels */,
 				AD281CE121D2DAAC00B56C88 /* Manegers */,
 				AD281CDA21D28C5400B56C88 /* Models */,
 				AD6C08D221CCF494000DCDA7 /* Extentions */,
-				ADC7515221CC39EF00344810 /* Protocols */,
 				ADC7514221CA987E00344810 /* Routers */,
 				ADC7514021CA981D00344810 /* Screens */,
 				ADC7514C21CC378C00344810 /* Custon Views */,
@@ -502,6 +505,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SocialNetworkApp/Pods-SocialNetworkApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ARSLineProgress/ARSLineProgress.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
@@ -511,6 +515,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ARSLineProgress.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
@@ -553,6 +558,7 @@
 				ADD04D3B21D5004300636B9A /* Validator.swift in Sources */,
 				AD6C08E221CD113F000DCDA7 /* HeigtContainable.swift in Sources */,
 				ADC7514621CC28FE00344810 /* StartRouter.swift in Sources */,
+				ADD04D3D21D5074D00636B9A /* StorageManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

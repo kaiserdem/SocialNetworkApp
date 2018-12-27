@@ -7,10 +7,12 @@
 //
 
 import Foundation
-
+                               // обьяденили протоколы  
 typealias StaticCellProtocol = NibLoadable & HeigtContainable
 
 typealias ItemClosure<T> = ((T) -> Void) // дженерик
+
+typealias OptionalItemClosure<T> = ((T?) -> Void)
 
 typealias VoidClosure = (() -> Void) // клоужер
 

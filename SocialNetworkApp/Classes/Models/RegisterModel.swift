@@ -14,6 +14,7 @@ class RegisterModel {
     var password: String?
     var sex: Sex = .male
     var birthday: Date?
+    var userId: String
     
     var isFilled: Bool { // заполнены все поля
         guard !(email ?? "").isEmpty, !(password ?? "").isEmpty, birthday != nil else {
@@ -29,5 +30,8 @@ class RegisterModel {
         "birthday": (birthday ?? Date()).timeIntervalSince1970
     ]
 
+    }
+    init() {
+        self.userId = UUID.init().uuidString
     }
 }

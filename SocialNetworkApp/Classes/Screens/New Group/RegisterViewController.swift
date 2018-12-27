@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ARSLineProgress
 
 class RegisterViewController: UIViewController {
     
@@ -42,14 +43,14 @@ class RegisterViewController: UIViewController {
     }
     
     @objc func rigthBarButtonClicked(sender: UIBarButtonItem) {
-//        guard registerModel.isFilled else {
-//            showAlert(with: "Error", and: "Fill in all fields")
-//            return
-//        }
-        
-        
-        self.showAlert(with: registerModel.email ?? "", and: registerModel.password ?? "")
-        
+        AuthManeger.shared.register(with: registerModel) { result in
+            switch result {
+            case .success(_):
+                self.showAlert(with: "Ready", and: "You are registered")
+            case .failure(let _):
+                self.showAlert(with: "Error", and: "Fill in all fields")
+            }
+        }
     }
     
     private func configureDatePickerView () { // пикер вю, выбор даты
@@ -95,8 +96,12 @@ extension RegisterViewController:UINavigationControllerDelegate, UIImagePickerCo
             return
         }
         self.registerModel.photo = image // выбор картинки
-        updateDoneButtonStatus()
+        updateDoneButtonStatus() // статус кнопки продолжить
         tableView.reloadData() // обновить таблицу
+        ARSLineProgress.show() //показать загрузку
+        StorageManager.shared.upload(photo: image, by: registerModel){ // загрузка картинки
+            ARSLineProgress.hide() // выключить загрузку
+        }
     }
 }
 extension RegisterViewController {
