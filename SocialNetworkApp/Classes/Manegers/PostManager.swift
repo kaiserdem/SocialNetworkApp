@@ -40,17 +40,20 @@ final class PostManager: FirebaseMamager { //
     }
     func loadingAllPost(completion: @escaping ItemClosure<Result>) {
         userRef.observe(.value) { (snapshot) in
-            var result:[Post] = []// пустой масив постов для заполнения
-            guard let value = snapshot.value as? [[AnyHashable: Any]] else {
+            var result:[Post] = []   // пустой масив постов для заполнения
+            
+            guard let value = snapshot.value as? [String: [AnyHashable: Any]] else {
                 completion(.error("Post not exists")) // если не существует
                 return
             }
-            for element in value {
-                if let postsDictionaryArray = (element[Keys.posts] as? [[AnyHashable: Any]]) {
-                    let posts = postsDictionaryArray.compactMap { try? Post.init(from: $0) }
+            let allKeys = value.keys
+            allKeys.forEach({ (key) in
+                
+                if let element = value[key], let postsDictionaryArray = (element[Keys.posts.rawValue] as? [String:[AnyHashable: Any]]) {
+                    let posts = postsDictionaryArray.compactMap { try? Post.init(from: $0.value) }
                     result.append(contentsOf: posts)
                 }
-            }
+            })
             completion(.seccess(result))
         }
     }

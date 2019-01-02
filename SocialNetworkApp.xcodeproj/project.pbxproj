@@ -56,12 +56,14 @@
 		ADD04D4321D5402E00636B9A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD04D4121D5402E00636B9A /* LoginViewController.swift */; };
 		ADD04D4421D5402E00636B9A /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADD04D4221D5402E00636B9A /* LoginViewController.xib */; };
 		ADD04D4721D5478400636B9A /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD04D4621D5478400636B9A /* TextField.swift */; };
-		ADD04D4B21D5527D00636B9A /* FeadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD04D4921D5527D00636B9A /* FeadViewController.swift */; };
-		ADD04D4C21D5527D00636B9A /* FeadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADD04D4A21D5527D00636B9A /* FeadViewController.xib */; };
 		ADD04D4F21D5538300636B9A /* UserHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADD04D4E21D5538300636B9A /* UserHeaderView.xib */; };
 		ADD04D5121D574B800636B9A /* UserHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD04D5021D574B800636B9A /* UserHeaderView.swift */; };
 		ADE007C921DCD46600095EF2 /* BiometricAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE007C821DCD46600095EF2 /* BiometricAuthManager.swift */; };
 		ADE007CB21DD318900095EF2 /* Extention + Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE007CA21DD318900095EF2 /* Extention + Decodable.swift */; };
+		ADE007D021DD37F900095EF2 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE007CE21DD37F900095EF2 /* PostTableViewCell.swift */; };
+		ADE007D121DD37F900095EF2 /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADE007CF21DD37F900095EF2 /* PostTableViewCell.xib */; };
+		ADE007D421DD426D00095EF2 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE007D221DD426D00095EF2 /* FeedViewController.swift */; };
+		ADE007D521DD426D00095EF2 /* FeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADE007D321DD426D00095EF2 /* FeedViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,12 +132,14 @@
 		ADD04D4121D5402E00636B9A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		ADD04D4221D5402E00636B9A /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		ADD04D4621D5478400636B9A /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
-		ADD04D4921D5527D00636B9A /* FeadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeadViewController.swift; sourceTree = "<group>"; };
-		ADD04D4A21D5527D00636B9A /* FeadViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeadViewController.xib; sourceTree = "<group>"; };
 		ADD04D4E21D5538300636B9A /* UserHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserHeaderView.xib; sourceTree = "<group>"; };
 		ADD04D5021D574B800636B9A /* UserHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHeaderView.swift; sourceTree = "<group>"; };
 		ADE007C821DCD46600095EF2 /* BiometricAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricAuthManager.swift; sourceTree = "<group>"; };
 		ADE007CA21DD318900095EF2 /* Extention + Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extention + Decodable.swift"; sourceTree = "<group>"; };
+		ADE007CE21DD37F900095EF2 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		ADE007CF21DD37F900095EF2 /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
+		ADE007D221DD426D00095EF2 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		ADE007D321DD426D00095EF2 /* FeedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedViewController.xib; sourceTree = "<group>"; };
 		E3D7D6C1B6CD662996E12FCE /* Pods-SocialNetworkApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialNetworkApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialNetworkApp/Pods-SocialNetworkApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -234,6 +238,7 @@
 		AD6C08D721CD07D1000DCDA7 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				ADE007CD21DD379D00095EF2 /* Post */,
 				AD6C08FC21CEC900000DCDA7 /* Text Field Cell */,
 				AD6C08F721CEB72A000DCDA7 /* Text Cell */,
 				AD6C08F221CEA5A7000DCDA7 /* Segment Cell */,
@@ -356,7 +361,7 @@
 			isa = PBXGroup;
 			children = (
 				AD635E0221DA917500B44F6C /* CreatePost */,
-				ADD04D4821D5519300636B9A /* Fead */,
+				ADD04D4821D5519300636B9A /* Feed */,
 				ADD04D4021D53FFA00636B9A /* Login */,
 				ADC7514721CC33FC00344810 /* Register */,
 				ADC7514121CA983100344810 /* Start */,
@@ -441,22 +446,31 @@
 			path = "Text Fielsd";
 			sourceTree = "<group>";
 		};
-		ADD04D4821D5519300636B9A /* Fead */ = {
+		ADD04D4821D5519300636B9A /* Feed */ = {
 			isa = PBXGroup;
 			children = (
-				ADD04D4921D5527D00636B9A /* FeadViewController.swift */,
-				ADD04D4A21D5527D00636B9A /* FeadViewController.xib */,
+				ADE007D221DD426D00095EF2 /* FeedViewController.swift */,
+				ADE007D321DD426D00095EF2 /* FeedViewController.xib */,
 			);
-			path = Fead;
+			path = Feed;
 			sourceTree = "<group>";
 		};
 		ADD04D4D21D5535800636B9A /* User Header */ = {
 			isa = PBXGroup;
 			children = (
-				ADD04D4E21D5538300636B9A /* UserHeaderView.xib */,
 				ADD04D5021D574B800636B9A /* UserHeaderView.swift */,
+				ADD04D4E21D5538300636B9A /* UserHeaderView.xib */,
 			);
 			path = "User Header";
+			sourceTree = "<group>";
+		};
+		ADE007CD21DD379D00095EF2 /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				ADE007CE21DD37F900095EF2 /* PostTableViewCell.swift */,
+				ADE007CF21DD37F900095EF2 /* PostTableViewCell.xib */,
+			);
+			path = Post;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -543,14 +557,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD6C08DD21CD08A5000DCDA7 /* InfoUserTableViewCell.xib in Resources */,
+				ADE007D521DD426D00095EF2 /* FeedViewController.xib in Resources */,
 				AD6C08ED21CE8510000DCDA7 /* HeaderTitleView.xib in Resources */,
 				ADD04D4421D5402E00636B9A /* LoginViewController.xib in Resources */,
 				AD6C08F621CEA5E8000DCDA7 /* SegmentedTableViewCell.xib in Resources */,
 				ADD04D4F21D5538300636B9A /* UserHeaderView.xib in Resources */,
 				ADC7512721CA87EE00344810 /* LaunchScreen.storyboard in Resources */,
+				ADE007D121DD37F900095EF2 /* PostTableViewCell.xib in Resources */,
 				AD635E0621DA91B800B44F6C /* CreatePostViewController.xib in Resources */,
 				ADC7513D21CA8DEF00344810 /* ViewController.xib in Resources */,
-				ADD04D4C21D5527D00636B9A /* FeadViewController.xib in Resources */,
 				ADC7512421CA87EE00344810 /* Assets.xcassets in Resources */,
 				ADC7514B21CC361900344810 /* RegisterViewController.xib in Resources */,
 				AD6C090021CEC943000DCDA7 /* TextFieldCellTableViewCell.xib in Resources */,
@@ -631,7 +646,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD635E0E21DAA0B000B44F6C /* Extention + Encodable.swift in Sources */,
-				ADD04D4B21D5527D00636B9A /* FeadViewController.swift in Sources */,
 				ADD04D4321D5402E00636B9A /* LoginViewController.swift in Sources */,
 				ADD04D3721D4FF7600636B9A /* CustomError.swift in Sources */,
 				AD635E0A21DA98AC00B44F6C /* FirebaseMamager.swift in Sources */,
@@ -653,10 +667,12 @@
 				AD6C08D421CCF50B000DCDA7 /* Extentions+ UIVIews.swift in Sources */,
 				ADE007C921DCD46600095EF2 /* BiometricAuthManager.swift in Sources */,
 				AD635E0C21DA9EFB00B44F6C /* Post.swift in Sources */,
+				ADE007D421DD426D00095EF2 /* FeedViewController.swift in Sources */,
 				ADD04D3921D4FFFC00636B9A /* CustomErrors.swift in Sources */,
 				AD635E0521DA91B800B44F6C /* CreatePostViewController.swift in Sources */,
 				AD281CE321D2DAF400B56C88 /* AuthManeger.swift in Sources */,
 				AD6C08FA21CEB765000DCDA7 /* TextTableViewCell.swift in Sources */,
+				ADE007D021DD37F900095EF2 /* PostTableViewCell.swift in Sources */,
 				AD6C08FF21CEC943000DCDA7 /* TextFieldCellTableViewCell.swift in Sources */,
 				ADC7514F21CC387300344810 /* PhotoView.swift in Sources */,
 				AD281CDE21D28D3800B56C88 /* Sex.swift in Sources */,

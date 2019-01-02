@@ -30,7 +30,7 @@ final class Router {
         let createPostTabBarItem = UITabBarItem(tabBarSystemItem: .more, tag: 0)
         createPostNC.tabBarItem = createPostTabBarItem
         
-        let feedVC = FeadViewController() // второй контроллер
+        let feedVC = FeedViewController() // второй контроллер
         let feedNC = UINavigationController(rootViewController: feedVC)
         let feedTabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 1)
         feedNC.tabBarItem = feedTabBarItem
