@@ -31,8 +31,6 @@ class ViewController: UIViewController {
     private func addTargets() {
         singInButton.addTarget(self, action: #selector(singInButtonCliced), for: .touchUpInside)
         registerButton.addTarget(self, action: #selector(registerButtonCliced), for: .touchUpInside)
-
-        
     }
     @objc private func singInButtonCliced() {
         StartRouter.shared.goToLoginScreen(from: self) // показываем контроллер
@@ -45,12 +43,12 @@ class ViewController: UIViewController {
 
 extension ViewController {
     fileprivate class Decorator { // приватный класс
-        static let buttonCornerRadius: CGFloat = 8
+        static let buttonCornerRadius: CGFloat = 8 // статистическая константа
         private init() {}
-
+         //функ разукращивает вю, при вызове в viewDidLoad
         static func decorate(_vc: ViewController) {
-            _vc.registerButton.layer.cornerRadius = buttonCornerRadius
-            _vc.registerButton.layer.borderColor = #colorLiteral(red: 0.9450980392, green: 0.9450980392, blue: 0.9450980392, alpha: 1)
+            _vc.registerButton.layer.cornerRadius = buttonCornerRadius // радиус
+            _vc.registerButton.layer.borderColor = #colorLiteral(red: 0.9450980392, green: 0.9450980392, blue: 0.9450980392, alpha: 1)  // цвет
         }
     }
 }

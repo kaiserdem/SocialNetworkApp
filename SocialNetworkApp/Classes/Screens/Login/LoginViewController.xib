@@ -13,6 +13,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="SocialNetworkApp" customModuleProvider="target">
             <connections>
+                <outlet property="authButton" destination="Fs8-4T-Jbl" id="G6D-0Y-jaK"/>
                 <outlet property="emailTextField" destination="ZhV-rt-x8H" id="DwE-9j-htY"/>
                 <outlet property="passwordTextField" destination="ohA-OD-UvC" id="fWj-14-Z39"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -24,23 +25,32 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="bvX-Zf-FbI">
-                    <rect key="frame" x="0.0" y="30" width="375" height="89"/>
+                    <rect key="frame" x="0.0" y="20" width="375" height="134"/>
                     <subviews>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZhV-rt-x8H" customClass="TextField" customModule="SocialNetworkApp" customModuleProvider="target">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your email and password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RWC-e3-di1">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="0fg-mH-pWP"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZhV-rt-x8H" customClass="TextField" customModule="SocialNetworkApp" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="45" width="375" height="44"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="44" id="cu6-W8-XTL"/>
+                                <constraint firstAttribute="height" constant="44" id="6fP-0k-cN4"/>
                             </constraints>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ohA-OD-UvC" customClass="TextField" customModule="SocialNetworkApp" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="45" width="375" height="44"/>
+                            <rect key="frame" x="0.0" y="90" width="375" height="44"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="44" id="cNr-dl-0yC"/>
+                                <constraint firstAttribute="height" constant="44" id="7KD-mp-nTO"/>
                             </constraints>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -48,17 +58,38 @@
                         </textField>
                     </subviews>
                 </stackView>
+                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TvS-Bz-VJb">
+                    <rect key="frame" x="0.0" y="156" width="375" height="112"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="or use Touch ID/Face ID to proceed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IFc-WT-hDx">
+                            <rect key="frame" x="0.0" y="8" width="375" height="20.5"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fs8-4T-Jbl">
+                            <rect key="frame" x="160" y="40.5" width="65" height="65"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" backgroundImage="touchId"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
             </subviews>
             <color key="backgroundColor" name="grayColor"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bvX-Zf-FbI" secondAttribute="trailing" id="De4-GL-I9z"/>
-                <constraint firstItem="ZhV-rt-x8H" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="Po0-6H-dtC"/>
-                <constraint firstItem="bvX-Zf-FbI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="e19-wQ-NGb"/>
+                <constraint firstItem="bvX-Zf-FbI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ZIP-8g-4SH"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bvX-Zf-FbI" secondAttribute="trailing" id="f14-f5-P31"/>
+                <constraint firstItem="TvS-Bz-VJb" firstAttribute="top" secondItem="bvX-Zf-FbI" secondAttribute="bottom" id="jL0-ud-B0t"/>
+                <constraint firstItem="bvX-Zf-FbI" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="ooh-4z-A9S"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="140" y="126.38680659670166"/>
         </view>
     </objects>
     <resources>
+        <image name="touchId" width="512" height="512"/>
         <namedColor name="grayColor">
             <color red="0.94509803921568625" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

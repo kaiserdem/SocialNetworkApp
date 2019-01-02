@@ -48,7 +48,12 @@ class RegisterViewController: UIViewController {
             ARSLineProgress.hide()
             switch result {
             case .success(_):
-                self.showAlert(with: "Ready", and: "You are registered")
+                StartRouter.shared.routerAfterSuccessAuth(from: self)
+                SecureStorageManager.shared.save(email: self.registerModel.email, password: self.registerModel.password, completionHandler: { (error) in
+                    if let error = error {
+                        print(String(describing: error.errorDescription))
+                    }
+                })
             case .failure(let error):
                 self.showAlert(with: "Error", and: error.localizedDescription)
             }
@@ -80,7 +85,6 @@ class RegisterViewController: UIViewController {
         imagePickerController.delegate = self
         imagePickerController.sourceType = .photoLibrary // выбрать из раздела
         present(imagePickerController, animated: true, completion: nil) // показать
-        
     }
     
     private func registerCells() { // зарегистрировали ячейки

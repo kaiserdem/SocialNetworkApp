@@ -18,6 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         Router.shared.root(&window)
         FirebaseApp.configure()
+        AuthManeger.shared.singInIfNeeded()
+        // SecureStorageManager.shared.eraseUserDataIfNeded() //стереть кичейн с 
         return true
     }
 
@@ -45,4 +47,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
+
 

@@ -9,14 +9,16 @@
 import Foundation
 
 enum Result<Value> {
-    case success(Value)
-    case failure(Error)
+    case success(Value) // успех
+    case failure(Error) // отказ
 }
 
 enum CustomErrors {
-    case invalidEmail
-    case unknownError
-    case serverError
+    case invalidEmail // не верный адрес почты
+    case unknownError // неизвестная ошибка
+    case serverError  // ошибка сервера
+    case keychainError
+    case biometricAuthError(String)
 }
 
 extension CustomErrors: LocalizedError {
@@ -29,6 +31,12 @@ extension CustomErrors: LocalizedError {
             return NSLocalizedString("server_error", comment: "")
         case .serverError:
             return NSLocalizedString("server_error", comment: "")
+        case .keychainError:
+            /// generally, user shouldn't know about this error
+            /// because it is secure storage
+            return NSLocalizedString("keychain_error", comment: "")
+        case .biometricAuthError(let error):
+            return error
         }
     }
 }

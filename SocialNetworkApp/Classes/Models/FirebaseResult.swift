@@ -1,5 +1,5 @@
 //
-//  AuthResult.swift
+//  FirebaseResult.swift
 //  SocialNetworkApp
 //
 //  Created by Kaiserdem on 27.12.2018.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum AuthResult {
+enum FirebaseResult {
     case success
     case error(String)
 }

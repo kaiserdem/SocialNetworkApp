@@ -22,3 +22,8 @@ func ID() -> String {
     }
     return result
 }
+public func onMain(block: @escaping () -> Void) { // выполняеться на главном потоке
+    DispatchQueue.main.async {
+        block()
+    }
+}

@@ -18,6 +18,7 @@ final class PhotoView: UIView, NibLoadable {
     
     override func didMoveToSuperview() {
         super.didMoveToSuperview()
+        
         Decorator.decorator(self)
         addLable()
         addPlusView()
@@ -59,7 +60,7 @@ final class PhotoView: UIView, NibLoadable {
         addConstraints(constraints)
     }
     
-    private func addPlusView() { //красит кнопку в свой цвет
+    private func addPlusView() { 
         plusView.translatesAutoresizingMaskIntoConstraints = false
         plusView.contentMode = .scaleAspectFit
         plusView.tintColor = #colorLiteral(red: 0.2980392157, green: 0.4588235294, blue: 0.6392156863, alpha: 1)
@@ -78,7 +79,7 @@ final class PhotoView: UIView, NibLoadable {
 }
 
 extension PhotoView {
-    fileprivate final class Decorator {
+    fileprivate final class Decorator { // разрисовывает вю
         static func decorator(_ view: PhotoView) {
             view.layer.borderColor = #colorLiteral(red: 0.7450980392, green: 0.7450980392, blue: 0.7450980392, alpha: 1)
             view.layer.borderWidth = 1

@@ -25,9 +25,8 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SNK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u9Q-K7-boR">
-                    <rect key="frame" x="16" y="310" width="343" height="47"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="SNK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u9Q-K7-boR">
+                    <rect key="frame" x="131" y="310" width="113.5" height="47"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="56"/>
                     <color key="textColor" red="0.9081903861822902" green="0.93348159805558362" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
@@ -70,6 +69,7 @@
                 <constraint firstItem="9PD-Sb-zEO" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="8ar-UF-fz0"/>
                 <constraint firstItem="o7r-uH-Y7d" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="G6z-vo-DfG"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="o7r-uH-Y7d" secondAttribute="bottom" constant="32" id="Gaa-RN-QsO"/>
+                <constraint firstItem="u9Q-K7-boR" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="IPB-nm-Myb"/>
                 <constraint firstItem="o7r-uH-Y7d" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Ni1-WY-iWg"/>
                 <constraint firstItem="o7r-uH-Y7d" firstAttribute="top" secondItem="9PD-Sb-zEO" secondAttribute="bottom" constant="16" id="O7b-Gh-x6U"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="o7r-uH-Y7d" secondAttribute="trailing" constant="16" id="dH8-gy-cn7"/>

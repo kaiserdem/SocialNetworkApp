@@ -11,35 +11,43 @@ import Firebase
 import FirebaseDatabase
 import FirebaseStorage
 import FirebaseAuth
+import Locksmith
 
-class AuthManeger {
+class AuthManeger: FirebaseMamager {
+    
     var currentUser: User?   // текущий пользователь
-    static let shared = AuthManeger()
-    private init() {}
-    
-    // указывает на первоначальную ветку в базе данных
-    private var sourseRef:DatabaseReference {
-      return Database.database().reference()
-    }
-    private var userRef: DatabaseReference {
-        return sourseRef.child("users")
-    }
-    
-    private let auth = Auth.auth()
+    static let shared = AuthManeger() // получаем доступ
 
+    private let auth = Auth.auth()
+    
+    func singInIfNeeded(completion: ItemClosure<FirebaseResult>? = nil) {
+        // проверка сохранен ли пользователь
+        let credentials = SecureStorageManager.shared.loadEmailAndPassword()
+        
+        guard let email = credentials.email, let password = credentials.password else {
+            return
+        }
+        signIn(with: email, and: password, completion: completion ?? {_ in})
+    }
     // функция для автозации, возвр кожер с результатом
-    func  singIn(with email: String, and password: String, completion:@escaping  ItemClosure<AuthResult>) {
+    func signIn(with email: String?, and password: String?, completion: @escaping ItemClosure<FirebaseResult>) {
+        guard let email = email, let password = password else {
+            completion(FirebaseResult.error("Something wrong with email or password. Please try again"))
+            return
+        }
         auth.signIn(withEmail: email, password: password) { (result, error) in
             if let error = error {
-                completion(AuthResult.error(error.localizedDescription))
+                completion(FirebaseResult.error(error.localizedDescription))
                 return
             }
-            guard let user = result?.user else { // проверка пользователя
-                completion(AuthResult.error("User not exist"))
+            
+            guard let user = result?.user else {
+                completion(FirebaseResult.error("User not exist"))
                 return
             }
+            
             self.currentUser = user
-            completion(AuthResult.success)
+            completion(FirebaseResult.success)
         }
     }
     
@@ -60,30 +68,35 @@ class AuthManeger {
             return
         }
 
+        
         let id = model.userId
         auth.createUser(withEmail: email, password: password) { (result, error) in
             if let error = error {
                 completion(.failure(error))
-            } else if let _ = result {
-                var dict = model.dict
-                dict["id"] = id
-                self.userRef.child(id).setValue(dict, withCompletionBlock: { (error, reference) in
-                    self.addAvatarUrlNeeded(for: model)
-                    completion(.success(()))
-                })
-            } else {
-                completion(.failure(CustomErrors.unknownError))
+                return
             }
+            
+            guard let res = result else {
+                completion(.failure(CustomErrors.unknownError))
+                return
+            }
+            self.currentUser = res.user
+            var dict = model.dict
+            dict["id"] = id
+            self.userRef.child(res.user.uid).setValue(dict, withCompletionBlock: { (error, reference) in
+                self.addAvatarUrlNeeded(for: model, user: res.user)
+                completion(.success(()))
+            })
         }
     }
                   // добавляем ссылку на фото в бд
-    func addAvatarUrlNeeded(for model: RegisterModel) {
+    func addAvatarUrlNeeded(for model: RegisterModel, user: User) {
         
         StorageManager.shared.loadAvatarUrl(for: model) { (url) in // загружаем url
             guard let url = url else { // проверяем на нил
                 return
             } // нашли юзера по child, создаем новую ветку, записываем в базу
-            self.userRef.child(model.userId).child("avatarUrl").setValue(url.absoluteString)
+            self.userRef.child(user.uid).child("avatarUrl").setValue(url.absoluteString)
         }
     }
 }

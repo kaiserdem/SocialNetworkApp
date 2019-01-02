@@ -8,6 +8,6 @@
 
 import UIKit
 
-protocol HeigtContainable {
+protocol HeigtContainable { // протокол обязывает имять высоту 
     static var heigth: CGFloat  { get }
 }

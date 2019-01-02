@@ -1,5 +1,5 @@
 //
-//  Extentions+ UIVIews.swift
+//  Extentions + UIVIews.swift
 //  SocialNetworkApp
 //
 //  Created by Kaiserdem on 21.12.2018.
@@ -9,7 +9,7 @@
 import UIKit
 
 extension UIView {
-    func round() { // круговые вю
+    func round() { // Функция создает круговые вю
         layer.cornerRadius = frame.height / 2
     }
 }
