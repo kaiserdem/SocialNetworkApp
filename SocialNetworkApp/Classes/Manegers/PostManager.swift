@@ -9,7 +9,7 @@
 import Foundation
 import Firebase
 
-final class PostManager: FirebaseMamager { //
+final class PostManager: FirebaseManager { //
     enum Result {
         case seccess([Post]) //возвращаеться масив постов
         case error(String)
@@ -30,7 +30,7 @@ final class PostManager: FirebaseMamager { //
             return
         }
         // обращаемся к ветке по айди пользователя, создаем новую ветку
-        userRef.child(user.uid).child(Keys.posts.rawValue).child(postID).setValue(dictionary) { (error, reference) in
+      usersRef.child(user.uid).child(Keys.posts.rawValue).child(postID).setValue(dictionary) { (error, reference) in
             if let error = error?.localizedDescription {
                 completion(.error(error))
                 return
@@ -39,7 +39,7 @@ final class PostManager: FirebaseMamager { //
         }
     }
     func loadingAllPost(completion: @escaping ItemClosure<Result>) {
-        userRef.observe(.value) { (snapshot) in
+        usersRef.observe(.value) { (snapshot) in
             var result:[Post] = []   // пустой масив постов для заполнения
             
             guard let value = snapshot.value as? [String: [AnyHashable: Any]] else {
@@ -49,10 +49,10 @@ final class PostManager: FirebaseMamager { //
             let allKeys = value.keys
             allKeys.forEach({ (key) in
                 
-                if let element = value[key], let postsDictionaryArray = (element[Keys.posts.rawValue] as? [String:[AnyHashable: Any]]) {
-                    let posts = postsDictionaryArray.compactMap { try? Post.init(from: $0.value) }
-                    result.append(contentsOf: posts)
-                }
+              if let element = value[key], let postsDictionaryArray = (element[Keys.posts.rawValue] as? [String: [AnyHashable: Any]]) {
+                let posts = postsDictionaryArray.compactMap { try? Post.init(from: $0.value as! Decoder) }
+                result.append(contentsOf: posts)
+              }
             })
             completion(.seccess(result))
         }

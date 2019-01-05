@@ -13,7 +13,7 @@ import FirebaseStorage
 import FirebaseAuth
 import Locksmith
 
-class AuthManeger: FirebaseMamager {
+class AuthManeger: FirebaseManager {
     
     var currentUser: User?   // текущий пользователь
     static let shared = AuthManeger() // получаем доступ
@@ -83,7 +83,7 @@ class AuthManeger: FirebaseMamager {
             self.currentUser = res.user
             var dict = model.dict
             dict["id"] = id
-            self.userRef.child(res.user.uid).setValue(dict, withCompletionBlock: { (error, reference) in
+            self.usersRef.child(res.user.uid).setValue(dict, withCompletionBlock: { (error, reference) in
                 self.addAvatarUrlNeeded(for: model, user: res.user)
                 completion(.success(()))
             })
@@ -96,7 +96,7 @@ class AuthManeger: FirebaseMamager {
             guard let url = url else { // проверяем на нил
                 return
             } // нашли юзера по child, создаем новую ветку, записываем в базу
-            self.userRef.child(user.uid).child("avatarUrl").setValue(url.absoluteString)
+            self.usersRef.child(user.uid).child("avatarUrl").setValue(url.absoluteString)
         }
     }
 }

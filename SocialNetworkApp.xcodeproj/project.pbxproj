@@ -13,10 +13,11 @@
 		AD281CE021D298C300B56C88 /* Extentions+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD281CDF21D298C300B56C88 /* Extentions+UIViewController.swift */; };
 		AD281CE321D2DAF400B56C88 /* AuthManeger.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD281CE221D2DAF400B56C88 /* AuthManeger.swift */; };
 		AD281CE621D2E28A00B56C88 /* Utilites.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD281CE521D2E28A00B56C88 /* Utilites.swift */; };
+		AD40338A21E153B600107713 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD40338921E153B600107713 /* FirebaseManager.swift */; };
+		AD40338C21E1577F00107713 /* Extention + Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD40338B21E1577F00107713 /* Extention + Decodable.swift */; };
 		AD635E0521DA91B800B44F6C /* CreatePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD635E0321DA91B800B44F6C /* CreatePostViewController.swift */; };
 		AD635E0621DA91B800B44F6C /* CreatePostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD635E0421DA91B800B44F6C /* CreatePostViewController.xib */; };
 		AD635E0821DA96E600B44F6C /* PostManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD635E0721DA96E600B44F6C /* PostManager.swift */; };
-		AD635E0A21DA98AC00B44F6C /* FirebaseMamager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD635E0921DA98AC00B44F6C /* FirebaseMamager.swift */; };
 		AD635E0C21DA9EFB00B44F6C /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD635E0B21DA9EFB00B44F6C /* Post.swift */; };
 		AD635E0E21DAA0B000B44F6C /* Extention + Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD635E0D21DAA0B000B44F6C /* Extention + Encodable.swift */; };
 		AD635E1021DAA60E00B44F6C /* SecureStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD635E0F21DAA60E00B44F6C /* SecureStorageManager.swift */; };
@@ -59,7 +60,6 @@
 		ADD04D4F21D5538300636B9A /* UserHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADD04D4E21D5538300636B9A /* UserHeaderView.xib */; };
 		ADD04D5121D574B800636B9A /* UserHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD04D5021D574B800636B9A /* UserHeaderView.swift */; };
 		ADE007C921DCD46600095EF2 /* BiometricAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE007C821DCD46600095EF2 /* BiometricAuthManager.swift */; };
-		ADE007CB21DD318900095EF2 /* Extention + Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE007CA21DD318900095EF2 /* Extention + Decodable.swift */; };
 		ADE007D021DD37F900095EF2 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE007CE21DD37F900095EF2 /* PostTableViewCell.swift */; };
 		ADE007D121DD37F900095EF2 /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADE007CF21DD37F900095EF2 /* PostTableViewCell.xib */; };
 		ADE007D421DD426D00095EF2 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE007D221DD426D00095EF2 /* FeedViewController.swift */; };
@@ -85,10 +85,11 @@
 		AD281CDF21D298C300B56C88 /* Extentions+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extentions+UIViewController.swift"; sourceTree = "<group>"; };
 		AD281CE221D2DAF400B56C88 /* AuthManeger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManeger.swift; sourceTree = "<group>"; };
 		AD281CE521D2E28A00B56C88 /* Utilites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilites.swift; sourceTree = "<group>"; };
+		AD40338921E153B600107713 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		AD40338B21E1577F00107713 /* Extention + Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extention + Decodable.swift"; sourceTree = "<group>"; };
 		AD635E0321DA91B800B44F6C /* CreatePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostViewController.swift; sourceTree = "<group>"; };
 		AD635E0421DA91B800B44F6C /* CreatePostViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreatePostViewController.xib; sourceTree = "<group>"; };
 		AD635E0721DA96E600B44F6C /* PostManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostManager.swift; sourceTree = "<group>"; };
-		AD635E0921DA98AC00B44F6C /* FirebaseMamager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseMamager.swift; sourceTree = "<group>"; };
 		AD635E0B21DA9EFB00B44F6C /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		AD635E0D21DAA0B000B44F6C /* Extention + Encodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extention + Encodable.swift"; sourceTree = "<group>"; };
 		AD635E0F21DAA60E00B44F6C /* SecureStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureStorageManager.swift; sourceTree = "<group>"; };
@@ -135,7 +136,6 @@
 		ADD04D4E21D5538300636B9A /* UserHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserHeaderView.xib; sourceTree = "<group>"; };
 		ADD04D5021D574B800636B9A /* UserHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHeaderView.swift; sourceTree = "<group>"; };
 		ADE007C821DCD46600095EF2 /* BiometricAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricAuthManager.swift; sourceTree = "<group>"; };
-		ADE007CA21DD318900095EF2 /* Extention + Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extention + Decodable.swift"; sourceTree = "<group>"; };
 		ADE007CE21DD37F900095EF2 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		ADE007CF21DD37F900095EF2 /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
 		ADE007D221DD426D00095EF2 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
@@ -199,7 +199,7 @@
 				ADD04D3C21D5074D00636B9A /* StorageManager.swift */,
 				AD635E0F21DAA60E00B44F6C /* SecureStorageManager.swift */,
 				AD635E0721DA96E600B44F6C /* PostManager.swift */,
-				AD635E0921DA98AC00B44F6C /* FirebaseMamager.swift */,
+				AD40338921E153B600107713 /* FirebaseManager.swift */,
 				ADE007C821DCD46600095EF2 /* BiometricAuthManager.swift */,
 			);
 			path = Manegers;
@@ -230,7 +230,7 @@
 				AD281CDF21D298C300B56C88 /* Extentions+UIViewController.swift */,
 				AD6C08D521CD0008000DCDA7 /* Extentions+NSLayautConstraint.swift */,
 				AD635E0D21DAA0B000B44F6C /* Extention + Encodable.swift */,
-				ADE007CA21DD318900095EF2 /* Extention + Decodable.swift */,
+				AD40338B21E1577F00107713 /* Extention + Decodable.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -648,7 +648,6 @@
 				AD635E0E21DAA0B000B44F6C /* Extention + Encodable.swift in Sources */,
 				ADD04D4321D5402E00636B9A /* LoginViewController.swift in Sources */,
 				ADD04D3721D4FF7600636B9A /* CustomError.swift in Sources */,
-				AD635E0A21DA98AC00B44F6C /* FirebaseMamager.swift in Sources */,
 				ADD04D5121D574B800636B9A /* UserHeaderView.swift in Sources */,
 				AD6C08F521CEA5E8000DCDA7 /* SegmentedTableViewCell.swift in Sources */,
 				ADD04D3F21D53C8200636B9A /* FirebaseResult.swift in Sources */,
@@ -658,11 +657,11 @@
 				AD6C08D621CD0008000DCDA7 /* Extentions+NSLayautConstraint.swift in Sources */,
 				AD281CE621D2E28A00B56C88 /* Utilites.swift in Sources */,
 				AD6C08DC21CD08A5000DCDA7 /* InfoUserTableViewCell.swift in Sources */,
+				AD40338A21E153B600107713 /* FirebaseManager.swift in Sources */,
 				ADC7514A21CC361900344810 /* RegisterViewController.swift in Sources */,
 				ADC7515421CC3A2300344810 /* NibLoadable.swift in Sources */,
 				ADC7514421CA999600344810 /* Router.swift in Sources */,
 				AD281CDC21D28CA900B56C88 /* RegisterModel.swift in Sources */,
-				ADE007CB21DD318900095EF2 /* Extention + Decodable.swift in Sources */,
 				AD6C08EB21CE84E2000DCDA7 /* HeaderTitleView.swift in Sources */,
 				AD6C08D421CCF50B000DCDA7 /* Extentions+ UIVIews.swift in Sources */,
 				ADE007C921DCD46600095EF2 /* BiometricAuthManager.swift in Sources */,
@@ -680,6 +679,7 @@
 				ADD04D4721D5478400636B9A /* TextField.swift in Sources */,
 				AD6C08E421CD11E6000DCDA7 /* Typealiases.swift in Sources */,
 				ADC7511D21CA87EC00344810 /* AppDelegate.swift in Sources */,
+				AD40338C21E1577F00107713 /* Extention + Decodable.swift in Sources */,
 				ADD04D3B21D5004300636B9A /* Validator.swift in Sources */,
 				AD6C08E221CD113F000DCDA7 /* HeigtContainable.swift in Sources */,
 				ADC7514621CC28FE00344810 /* StartRouter.swift in Sources */,
