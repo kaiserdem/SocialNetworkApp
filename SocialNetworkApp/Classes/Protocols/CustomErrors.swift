@@ -25,11 +25,11 @@ extension CustomErrors: LocalizedError {
     
     var errorDescription: String? {
         switch  self {
-        case .invalidEmail:
+        case .invalidEmail: // неверный адрес
             return NSLocalizedString("email_is_not_valid", comment: "")
-        case .unknownError:
+        case .unknownError: // не известная ошибка
             return NSLocalizedString("server_error", comment: "")
-        case .serverError:
+        case .serverError: // ошибка сервера
             return NSLocalizedString("server_error", comment: "")
         case .keychainError:
             /// generally, user shouldn't know about this error

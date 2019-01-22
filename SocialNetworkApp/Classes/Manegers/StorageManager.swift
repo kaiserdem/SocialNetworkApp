@@ -18,7 +18,7 @@ class StorageManager { // класс для работы с firebase Storage(м�
     // указывает на первоначальную ветку в базе данных
     private let sourseRef = Storage.storage().reference()
 
-    // принимает фото, возвращает клоужер(опционально)
+    // принимает фото, возвращает по айди клоужер(опционально)
     func upload(photo: UIImage, by model: RegisterModel, closure: VoidClosure? = nil) {
         guard let data = photo.jpegData(compressionQuality: 0.5) else {//фото уменьш в 0.5раз
             return
